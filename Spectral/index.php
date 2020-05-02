@@ -44,7 +44,8 @@
 							<br />
 							</p>
 
-							<!--The registration-->
+							<!--The autorisation and registration pane-->
+							
                             <form method="post" action="auth.php">
 								<h3>Заполните чтобы войти: </h3>
 								<div class="row gtr-uniform">
