@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Регистрация</title>
@@ -26,12 +21,12 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>DIPLOMA: Регистрация</h2>
-							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА 
-<br /> АМБИЦИОЗНЫХ ЛЮДЕЙ
-							<br />
+							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА
+							<br/> АМБИЦИОЗНЫХ ЛЮДЕЙ
+							<br/>
 							</p>
-							
-                            <form method="post" action="check.php">
+
+              <form method="post" action="check.php">
 								<h3>Для регистрации, заполните следующие поля: </h3>
 							<div class="row gtr-uniform">
 								<div class="col-6 col-12">
@@ -46,14 +41,14 @@
 									<br>
 									<span>Повторите пароль</span><br>
 				            		<input type="password" name="demo-password" class="form-control" id="demo-password" value=""/>
-				            	</div> 
-							</div> <br> 
+				            	</div>
+							</div> <br>
 								<div class="actions special">
 									<button class="button primary" type="submit">Зарегистрироваться</button>
 								</div>
 							</form>
 
-                            
+
 						</div>
 
 					</section>

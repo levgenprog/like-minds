@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>DiplomaBro</title>
@@ -20,19 +15,6 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<h1><a href="index.html">Diploma</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Меню</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="#">Зарегистрироваться</a></li>
-											<li><a href="#">Авторизоваться</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
 					</header>
 
 				<!-- Banner -->
@@ -40,12 +22,12 @@
 						<div class="inner">
 							<h2>DIPLOMA</h2>
 							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА
-<br /> АМБИЦИОЗНЫХ ЛЮДЕЙ
-							<br />
+								<br/> АМБИЦИОЗНЫХ ЛЮДЕЙ
+							<br/>
 							</p>
 
 							<!--The autorisation and registration pane-->
-							
+
                             <form method="post" action="auth.php">
 								<h3>Заполните чтобы войти: </h3>
 								<div class="row gtr-uniform">
@@ -61,7 +43,7 @@
 									<button class="button fit" type="submit">Авторизоваться</button>
 								</div>
 							</form>
-                            <ul class="actions special">
+              <ul class="actions special">
 								<li><a href="register.php" class="button primary">Зарегистрироваться</a></li>
 							</ul>
 
@@ -107,7 +89,7 @@
 								<p>Чем раньше вы начнете ваш путь, тем быстрее ваши мечты воплотяться в жизнь</p>
 							</header>
 							<ul class="actions stacked">
-								<li><a href="#" class="button fit">Начать!</a></li>
+								<li><a href="register.php" class="button fit">Начать!</a></li>
 							</ul>
 						</div>
 					</section>
