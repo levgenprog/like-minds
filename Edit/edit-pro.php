@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Diploma</title>
@@ -88,10 +83,7 @@
 
 							<!-- Content -->
 								<section>
-									<header class="main">
-										<h1>Редактирование профиля</h1>
-									</header>
-									
+
 									<!-- Menu -->
 								<section id="search" class="alt">
 									<nav id="menu">
@@ -104,70 +96,57 @@
 										<li><a href="Minded.html">Поиск Единомышленников</a></li>
 										<li><a href="../Spectral/exit.php">Выход</a></li>
                                     </ul>
-									</nav>
-									
-                                    <h3 align="right">Фото вашего профиля</h3>                                   
-                                    <span class="image right"> <img src="images/Napoleon-1.jpg" alt="" > </span> 
-                                      
+									</nav><br>
 
+									<header class="main">
+										<h1>Редактирование профиля</h1>
+									</header>
+
+										<h3 align="right">Редактировать фото вашего профиля</h3>
+                  <span class="image right"> <img src="images/Napoleon-1.jpg" alt="" > </span>
+
+									<hr class="major"/>
+									<form method="post" action="#">
+								  <div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<h4>Ваш пол</h4>
+												<div class="col-12">
+														<select name="demo-category" id="demo-category">
+															<option value="">- Ваш пол -</option>
+															<option value="1">Мужской</option>
+															<option value="1">Женский</option>
+															<option value="1">Предпочитаю не отвечать</option>
+														</select>
+												</div>
+												<hr class="major"/>
+											<h4>Укажите Вашу страну</h4>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Страна" />
+												<hr class="major"/>
+											<h4>Укажите Ваш город</h4>
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Город" />
+				             </div>
+									</div>
 									<hr class="major" />
+									<div class="actions special">
+									 <button class="button main" type="submit">Сохранить</button>
+								 </div>
+								</form>
 
-								    <h4>Укажите Ваше имя</h4>
-									<form method="post" action="#">
-								    <div class="row gtr-uniform">
-									<div class="col-6 col-12-xsmall">
-								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Имя" />
-				             	</div> </div> </form>
-
-									<hr class="major" />
-                                    
-                                    	<h4>Укажите Вашу фамилию</h4>
-                                    <form method="post" action="#">
-														<div class="row gtr-uniform">
-															<div class="col-6 col-12-xsmall">
-																<input type="text" name="demo-name" id="demo-name" value="" placeholder="Фамилия" />
-															</div> </div> </form>
-                                    <hr class="major" />
-                                                                        <h4>Ваш пол</h4>
-                                    <div class="col-12">
-																<select name="demo-category" id="demo-category">
-																	<option value="">- Ваш пол -</option>
-																	<option value="1">Мужской</option>
-																	<option value="1">Женский</option>
-																	<option value="1">Предпочитаю не отвечать</option>
-																</select>
-															</div>
-                                                                        <hr class="major" />
-
-                                     <h4>Укажите Вашу страну</h4>
-									<form method="post" action="#">
-								    <div class="row gtr-uniform">
-									<div class="col-6 col-12-xsmall">
-								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Страна" />
-				             	</div> </div> </form>
-                                    
-                                    <hr class="major" />
-                                    
-                                     <h4>Укажите Ваш город</h4>
-									<form method="post" action="#">
-								    <div class="row gtr-uniform">
-									<div class="col-6 col-12-xsmall">
-								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Город" />
-				             	</div> </div> </form>
+							<!--Not here
                                 <hr class="major" />
                                     <h4>Укажите Ваши интересы - 10 направлений</h4>
-									
+
                                     <div class="col-12">
 								    <textarea name="demo-message" id="demo-message" placeholder="Что вас вдохновляет?" rows="6"></textarea>
 				             		</div>
-                                    
+
                                 <hr class="major" />
                                      <h4>Укажите Ваши SMART-цели по каждому из направлений</h4>
-									
+
                                     <div class="col-12">
 								    <textarea name="demo-message" id="demo-message" placeholder="S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени" rows="6"></textarea>
 				             		</div>
-                                    
+
                                 <hr class="major" />
 									<h4>Укажите Ваш Email-адрес</h4>
                                    <form method="post" action="#">
@@ -175,28 +154,18 @@
 															<div class="col-6 col-12-xsmall">
 															<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
 															</div> </div> </form>
-									 
-                                    
+
+
                                     <hr class="major" />
 
 									<h4>Расскажите о себе</h4>
 									<div class="col-12">
 								    <textarea name="demo-message" id="demo-message" placeholder="Умение описать себя в 100 словах - первый шаг к осознанной жизни." rows="6"></textarea>
 				             		</div>
-							    	</section>  
-                <hr class="major" />
-                <div class="col-6 col-12-small">
-															<ul class="actions stacked">
-																<li><a href="Личный-кабинет.html" class="button main">Сохранить</a></li>
-															</ul>
-														</div>
-                      
-                
 
-				<!-- Sidebar -->
-					
+-->
+							    	</section>
 
-							
 						</div>
 					</div>
 

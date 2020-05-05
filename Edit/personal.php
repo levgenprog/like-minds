@@ -110,14 +110,14 @@
 									<hr class="major" />
 								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$_COOKIE['user']?></b></h4>
                   <hr class="major" />
-                    <h4 class="user_about">Вы живете в: &nbsp;</h4>
+                    <h4 class="user_about">Вы живете в: &nbsp;<b></b> </h4>
 									<hr class="major" />
 										<h4 class="user_about">Ваш город: &nbsp;</h4>
                   <hr class="major" />
 
 									<div class="col-6 col-12-small">
 										<ul class="actions stacked">
-											<li><a href="Edit-pro.html" class="button main" align="left">Редактировать мой профиль</a></li>
+											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
 										</ul>
 									</div>
 

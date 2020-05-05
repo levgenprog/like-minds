@@ -12,7 +12,7 @@
 $password = md5($password.'9eir2');
 
 	//Find a user
-$result = $mysql -> query("SELECT `user_name` FROM `users` WHERE 
+$result = $mysql -> query("SELECT `user_name` FROM `users` WHERE
 `email` = '$email' AND `password` = '$password'");
 
 $user = $result->fetch_assoc();
