@@ -3,7 +3,7 @@
 						<nav id="nav">
 							<ul>
 								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Меню</span></a>
+									<a href="#menu" class="menuToggle"><span>Настройки</span></a>
 									<div id="menu">
 										<ul>
 											<li><a href="#">Зарегистрироваться</a></li>

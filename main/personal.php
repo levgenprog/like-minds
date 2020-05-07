@@ -100,7 +100,7 @@
 										<li><a href="#">Личный кабинет</a></li>
 										<li><a href="../chat/index.php">Мессенджер</a></li>
 										<li><a href="Minded.html">Поиск Единомышленников</a></li>
-										<li><a href="../Spectral/exit.php">Выход</a></li>
+										<li><a href="../auto/exit.php">Выход</a></li>
                                     </ul>
 								</nav><br><br>	
 									

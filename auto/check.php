@@ -46,7 +46,7 @@ if(isset($_POST)){
 				VALUES('$user_name', '$email', '$password')");
 		
 		 
-				header ('Location:../Spectral/register-passed.php');
+				header ('Location:../auto/register-passed.php');
 				//exit("<b><center><font size=4 color=green>Вы успешно зарегистрировались!</font></center></b>");
 			//}
 	 }

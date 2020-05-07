@@ -31,7 +31,7 @@
 							
 							<h1>Добро пожаловать, <?=$_COOKIE['user']?>. Чтобы выйти, нажми <a href="exit.php">здесь</a> </h1>
                             <ul class="actions special">
-								<li><a href="../Edit/personal.php" class="button primary">Перейти в личный кабинет</a></li>
+								<li><a href="../main/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>
 								
 						</div>

@@ -22,6 +22,6 @@ $user = $result->fetch_assoc();
 	}
 setcookie('user', $user['user_name'], time() + 3600, "/");
 
-header ('Location:../Spectral/cabinet.php');
+header ('Location:../auto/cabinet.php');
 
 ?>
