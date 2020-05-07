@@ -1,3 +1,6 @@
+<?php
+	$mysql = new mysqli('localhost', 'root', '', 'the_site') or die('Unable to connect');
+ ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -28,8 +31,33 @@
 
 							<!--The autorisation and registration pane-->
 
-                            <form method="post" action="auth.php">
+              <form method="post" action="index.php">
 								<h3>Заполните чтобы войти: </h3>
+								<?php
+								if (isset($_POST['auth'])) {
+									$email=filter_var(trim($_POST['email']),
+							 	 FILTER_SANITIZE_STRING);
+							 	 $password=filter_var(trim($_POST['password']),
+							 	 FILTER_SANITIZE_STRING);
+
+							 	 //Preparing the password
+							 $password = md5($password.'9eir2');
+
+							 	//Find a user
+							 $result = $mysql -> query("SELECT * FROM `users` WHERE
+							 `email` = '$email' AND `password` = '$password'");
+
+							 $user = $result->fetch_assoc();
+							 	if ($user == 0){
+							 		echo'<b><center><font size=4 color=red>
+									Пользователь с таким email не зарегистрирован, либо Вы ввели неверный пароль</font></center></b>';
+							 	}
+									else {
+										setcookie('user', $user['id'], time() + 3600, "/");
+									 header ('Location:../Spectral/cabinet.php');
+								 	}
+								}
+								 ?>
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12">
 										<span>Введите ваш e-mail: </span><br>
@@ -40,7 +68,7 @@
 									</div>
 								</div><br>
 								<div class="actions stacked">
-									<button class="button fit" type="submit">Авторизоваться</button>
+									<button class="button fit" name="auth" type="submit">Авторизоваться</button>
 								</div>
 							</form>
               <ul class="actions special">

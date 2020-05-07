@@ -1,9 +1,7 @@
+<?php
+require '../Edit/checks/user_inf.php';
+ ?>
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Регистрация</title>
@@ -26,13 +24,14 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>DIPLOMA: Регистрация прошла успешно!</h2>
-							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА 
-								<br /> АМБИЦИОЗНЫХ ЛЮДЕЙ
+							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА
+								<br/> АМБИЦИОЗНЫХ ЛЮДЕЙ
 
-                            <ul class="actions special">
-								<li><a href="index.php" class="button primary">Перейти в личный кабинет</a></li>
+								<h3>Теперь Вы можете перейти в свой кабинет, господин <?=$current_user['user_name']?></h3>
+              <ul class="actions special">
+								<li><a href="../Edit/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>
-								
+
 						</div>
 
 					</section>

@@ -1,3 +1,6 @@
+<?php
+include 'checks/user_inf.php';
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -97,7 +100,7 @@
 								<!-- Content -->
 
 									<header class="main">
-										<h1>Личный кабинет сэра <?=$_COOKIE['user']?></h1>
+										<h1>Личный кабинет сэра <?=$current_user['user_name']?></h1>
 									</header>
                   <h3 class="bu" align="right">Фото вашего профиля</h3>
                   <style>
@@ -108,9 +111,9 @@
                   <span class="image right"> <img src="images/Napoleon-1.jpg" alt="" > </span>
 
 									<hr class="major" />
-								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$_COOKIE['user']?></b></h4>
+								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$current_user['user_name']?></b></h4>
                   <hr class="major" />
-                    <h4 class="user_about">Вы живете в: &nbsp;<b></b> </h4>
+                    <h4 class="user_about">Вы живете в: &nbsp;<b><?=$current_user['id']?></b> </h4>
 									<hr class="major" />
 										<h4 class="user_about">Ваш город: &nbsp;</h4>
                   <hr class="major" />
