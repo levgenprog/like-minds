@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>DiplomaBro</title>
+		<title>DiplomaBrrro</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,25 +16,9 @@
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-				<!-- Piece Of shit -->
 
 				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Diploma</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Меню</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="#">Зарегистрироваться</a></li>
-											<li><a href="#">Авторизоваться</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+				<?php include "inc/header.php"; ?>
 
 				<!-- Banner -->
 					<section id="banner">
@@ -46,7 +30,7 @@
 							</p>
 
 							<!--The autorisation and registration pane-->
-							
+
                             <form method="post" action="auth.php">
 								<h3>Заполните чтобы войти: </h3>
 								<div class="row gtr-uniform">
@@ -114,18 +98,8 @@
 					</section>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Diploma</li><li>Made by connection_in_isolation</li>
-						</ul>
-					</footer>
+									<?php include "inc/footer.php"; ?>
+
 
 			</div>
 
