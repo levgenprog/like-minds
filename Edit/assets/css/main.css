@@ -273,7 +273,7 @@ hr {
   .row > .off-5 {
     margin-left: 41.66667%; }
   .row > .col-6 {
-    width: 50%; }
+    width: 100%; }
   .row > .off-6 {
     margin-left: 50%; }
   .row > .col-7 {
@@ -2271,3 +2271,7 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+.user_about{
+font-style: normal;
+font-weight: 400;
+}

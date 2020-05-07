@@ -1,9 +1,7 @@
+<?php
+require 'checks/user_inf.php';
+?>
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Diploma</title>
@@ -84,13 +82,8 @@
 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
 									</ul>
-								</header>
+								</header><br>
 
-							<!-- Content -->
-							
-									<header class="main">
-										<h1>Личный кабинет сэра <?=$_COOKIE['user']?></h1>
-									</header>
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
@@ -101,64 +94,65 @@
 										<li><a href="../chat/index.php">Мессенджер</a></li>
 										<li><a href="Minded.html">Поиск Единомышленников</a></li>
 										<li><a href="../Spectral/exit.php">Выход</a></li>
-                                    </ul>
-								</nav><br><br>	
-									
-                                    <h3 align="left">Фото вашего профиля</h3>   
-                                    <style>
-									img {
-									border: 3px solid #800000;
-									}
+                  </ul>
+								</nav><br><br>
+
+								<!-- Content -->
+
+									<header class="main">
+										<h1>Личный кабинет
+											<?php
+											//The treatment
+											if ($current_user['gender'] == 2) {
+												echo "госпожи";
+											}else {
+												echo "господина";
+											}
+										 ?> <?=$current_user['user_name']?></h1>
+									</header>
+                  <h3 class="bu" align="right">Фото вашего профиля</h3>
+                  <style>
+										img {
+										border: 3px solid #800000;
+										}
 									</style>
-                                    <span class="image left"> <img src="images/Napoleon-1.jpg" alt="" > </span> 
-                                       <div class="col-6 col-12-small"> 
-															<ul class="actions stacked">
-																<li><a href="Edit-pro.html" class="button main" align="right">Редактировать мой профиль</a></li>
-															</ul>
-														</div>
+                  <span class="image right"> <img src="images/Napoleon-1.jpg" alt="" > </span>
 
 									<hr class="major" />
-
-								    <h4>Ваше имя <?=$_COOKIE['user']?></h4>
-									
-<!--
+								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$current_user['user_name']?></b></h4>
+                  <hr class="major" />
+                    <h4 class="user_about">Вы живете в стране: &nbsp;<b><?=$current_user['country']?></b> </h4>
 									<hr class="major" />
-                                    
-                                    	<h4>Ваша Фамилия</h4>
-                                    
-                                    <hr class="major" />
-                                    <h4>Ваш пол</h4>
-                                    <hr class="major" />
+										<h4 class="user_about">Ваш город: &nbsp;<b><?=$current_user['city']?></b></h4>
+                  <hr class="major" />
 
-                                     <h4>Ваша страна</h4>
-									
-                                    
-                                    <hr class="major" />
-                                    
-                                     <h4>Ваш город</h4>
-									
-                                    <hr class="major" />
-                                    
-                                    <h4>Ваши интересы - 10 направлений</h4>
-                                    
-                                    <hr class="major" />
+									<div class="col-6 col-12-small">
+										<ul class="actions stacked">
+											<h4>Что-то не так?</h4>
+											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
+										</ul>
+									</div>
 
-                                    <h4>Ваши SMART-цели по каждому из направлений</h4>
-                                    
-                                    <hr class="major" />
+<!--Use not here
+                  <h4>Ваши интересы - 10 направлений</h4>
 
-									<h4>Ваш Email-адрес</h4>
-                                  <hr class="major" />
-									<h4>Информация о себе</h4>
-									
--->                      
-                
+                  <hr class="major" />
 
-				<!-- Sidebar 
+                  <h4>Ваши SMART-цели по каждому из направлений</h4>
+
+                  <hr class="major" />
+
+<h4>Ваш Email-адрес</h4>
+                <hr class="major" />
+<h4>Информация о себе</h4>
+-->
+
+
+				<!-- Sidebar
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Search 
+							<!-- Search
 								<section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Поиск" />
@@ -167,7 +161,7 @@
 
 
 
-							<!-- Section 
+							<!-- Section
 								<section>
 									<header class="major">
 										<h2>Наши статьи</h2>
@@ -194,7 +188,7 @@
 							<!-- Section -->
 
 
-							<!-- Footer 
+							<!-- Footer
 								<footer id="footer">
 									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
 									<header class="major">
