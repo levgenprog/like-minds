@@ -1,9 +1,7 @@
+<?php
+include '../Edit/checks/user_inf.php';
+ ?>
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Авторизация</title>
@@ -26,14 +24,23 @@
 					<section id="banner">
 						<div class="inner">
 							<h2>DIPLOMA: Авторизация прошла успешно!</h2>
-							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА 
-<br /> АМБИЦИОЗНЫХ ЛЮДЕЙ
-							
-							<h1>Добро пожаловать, <?=$_COOKIE['user']?>. Чтобы выйти, нажми <a href="exit.php">здесь</a> </h1>
+							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА
+								<br/> АМБИЦИОЗНЫХ ЛЮДЕЙ
+
+							<h1>Добро пожаловать,
+                <?php
+                //The treatment
+                if ($current_user['gender'] == 2) {
+                  echo "госпожа";
+                }else {
+                  echo "господин";
+                }
+                 ?>
+                <?=$current_user['user_name']?>. Чтобы выйти, нажми <a href="exit.php">здесь</a> </h1>
                             <ul class="actions special">
 								<li><a href="../main/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>
-								
+
 						</div>
 
 					</section>
