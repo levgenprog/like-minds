@@ -21,15 +21,14 @@
 						<div class="inner">
 
 							<!-- Header -->
-                            				<?php include "inc/header.php"; ?>
-
+							<?php include "inc1/header1.php"; ?>
 
 							<!-- Banner -->
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>В чем важность<br/>
-											поиска едино<br/>мышленников?</h1>
+											<h1>В чем важность<br />
+											поиска едино<br />мышленников?</h1>
 										</header>
                                         <blockquote>"В трудные времена опыт может вас не спасти. Не спасут и трудолюбие и талант. Если вам нужна работа, деньги, хороший совет, помощь или надежда, есть только одно надежное средство – <strong>широкий круг ваших друзей и знакомых."</strong><br /><strong> © Кейт Феррацци, Тал Рэз "Никогда не ешьте в одиночку и другие правила нетворкинга"</strong> </blockquote>
 										<ul class="actions">
@@ -153,7 +152,7 @@
 								</section>
 
 							<!-- Menu -->
-							 <?php include "inc/footer.php"; ?>
+							<?php include "inc1/footer1.php"; ?>
 
 						</div>
 					</div>
