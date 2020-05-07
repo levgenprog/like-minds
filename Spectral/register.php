@@ -97,16 +97,20 @@
 							<div class="row gtr-uniform">
 								<div class="col-6 col-12">
 									<span>Ваше имя: </span><br>
-				            		<input type="text" name="user_name"  class="form-control" id="user_name" value="" placeholder="Иванов Иван" />
+				            		<input type="text" name="user_name"  class="form-control" id="user_name"
+												value="<?php echo $_POST['user_name'];?>" placeholder="Иванов Иван" />
 									<br>
 									<span>Введите ваш E-mail: </span><br>
-									<input type="text" name="email" id="email" class="form-control" placeholder="examle@ex.com" />
+												<input type="text" name="email" id="email" class="form-control"
+												value="<?php echo $_POST['email'];?>" placeholder="examle@ex.com" />
 									<br>
 									<span>Придумайте пароль</span><br>
-				            		<input type="password" name="password" class="form-control" id="password" value=""/>
+				            		<input type="password" name="password" class="form-control" id="password"
+												value="<?php echo $_POST['password'];?>"/>
 									<br>
 									<span>Повторите пароль</span><br>
-				            		<input type="password" name="demo-password" class="form-control" id="demo-password" value=""/>
+				            		<input type="password" name="demo-password" class="form-control" id="demo-password"
+												 value="<?php echo $_POST['demo-password'];?>"/>
 				            	</div>
 							</div> <br>
 								<div class="actions special">

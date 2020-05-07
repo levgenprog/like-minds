@@ -61,21 +61,23 @@
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12">
 										<span>Введите ваш e-mail: </span><br>
-										<input type="text" name="email"  class="form-control" id="email" value="" placeholder="example@ex.com" />
+										<input type="text" name="email"  class="form-control" id="email"
+										value="<?php echo $_POST['email'];?>" placeholder="example@ex.com" />
 										<br>
 										<span>Введите пароль: </span><br>
-										<input type="password" name="password" class="form-control" id="password" value=""/>
+										<input type="password" name="password" class="form-control" id="password"
+										 value="<?php echo $_POST['password'];?>"/>
 									</div>
 								</div><br>
 								<div class="actions stacked">
 									<button class="button fit" name="auth" type="submit">Авторизоваться</button>
 								</div>
-							</form>
+							</form><br>
               <ul class="actions special">
 								<li><a href="register.php" class="button primary">Зарегистрироваться</a></li>
-							</ul>
+							</ul><br><br>
 
-						</div>
+						</div><br><br>
 						<a href="#one" class="more scrolly"></a>
 					</section>
 
