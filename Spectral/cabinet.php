@@ -27,7 +27,16 @@ include '../Edit/checks/user_inf.php';
 							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА
 								<br/> АМБИЦИОЗНЫХ ЛЮДЕЙ
 
-							<h1>Добро пожаловать, <?=$current_user['user_name']?>. Чтобы выйти, нажми <a href="exit.php">здесь</a> </h1>
+							<h1>Добро пожаловать,
+                <?php
+                //The treatment
+                if ($current_user['gender'] == 2) {
+                  echo "госпожа";
+                }else {
+                  echo "господин";
+                }
+                 ?>
+                <?=$current_user['user_name']?>. Чтобы выйти, нажми <a href="exit.php">здесь</a> </h1>
                             <ul class="actions special">
 								<li><a href="../Edit/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>

@@ -1,5 +1,5 @@
 <?php
-include 'checks/user_inf.php';
+require 'checks/user_inf.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -100,7 +100,15 @@ include 'checks/user_inf.php';
 								<!-- Content -->
 
 									<header class="main">
-										<h1>Личный кабинет сэра <?=$current_user['user_name']?></h1>
+										<h1>Личный кабинет
+											<?php
+											//The treatment
+											if ($current_user['gender'] == 2) {
+												echo "госпожи";
+											}else {
+												echo "господина";
+											}
+										 ?> <?=$current_user['user_name']?></h1>
 									</header>
                   <h3 class="bu" align="right">Фото вашего профиля</h3>
                   <style>
@@ -113,13 +121,14 @@ include 'checks/user_inf.php';
 									<hr class="major" />
 								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$current_user['user_name']?></b></h4>
                   <hr class="major" />
-                    <h4 class="user_about">Вы живете в: &nbsp;<b><?=$current_user['id']?></b> </h4>
+                    <h4 class="user_about">Вы живете в стране: &nbsp;<b><?=$current_user['country']?></b> </h4>
 									<hr class="major" />
-										<h4 class="user_about">Ваш город: &nbsp;</h4>
+										<h4 class="user_about">Ваш город: &nbsp;<b><?=$current_user['city']?></b></h4>
                   <hr class="major" />
 
 									<div class="col-6 col-12-small">
 										<ul class="actions stacked">
+											<h4>Что-то не так?</h4>
 											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
 										</ul>
 									</div>

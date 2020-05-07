@@ -27,7 +27,16 @@ require '../Edit/checks/user_inf.php';
 							<p>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА
 								<br/> АМБИЦИОЗНЫХ ЛЮДЕЙ
 
-								<h3>Теперь Вы можете перейти в свой кабинет, господин <?=$current_user['user_name']?></h3>
+								<h3>Теперь Вы можете перейти в свой кабинет,
+                    <?php
+                    //The treatment
+                    if ($current_user['gender'] == 2) {
+                      echo "госпожа";
+                    }else {
+                      echo "господин";
+                    }
+                     ?>
+                   <?=$current_user['user_name']?></h3>
               <ul class="actions special">
 								<li><a href="../Edit/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>
