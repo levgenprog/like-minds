@@ -1,5 +1,5 @@
 <?php
-require '../Edit/checks/user_inf.php';
+require '../main/checks/user_inf.php';
  ?>
 <!DOCTYPE HTML>
 <html>

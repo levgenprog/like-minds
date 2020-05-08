@@ -1,5 +1,5 @@
 <?php
-include '../Edit/checks/user_inf.php';
+include '../main/checks/user_inf.php';
  ?>
 <!DOCTYPE HTML>
 <html>
