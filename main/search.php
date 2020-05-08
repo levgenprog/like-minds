@@ -1,9 +1,7 @@
+<?php
+require 'checks/user_inf.php';
+?>
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Diploma</title>
@@ -104,7 +102,7 @@
 										<li><a href="../Spectral/exit.php">Выход</a></li>
                                     </ul>
 									</nav>
-								</section><br><br>	
+								</section><br><br>
 											<h2>Поиск единомышленников</h2>
 									<div class="col-12">
 																<select name="demo-category" id="demo-category">
@@ -123,7 +121,7 @@
 																</select>
 															</div>
                                     <hr class="minor" />
-                                    
+
                                     <section id="search" class="alt">
 									<form method="post" action="#">
 										<input type="text" name="query" id="query" placeholder="Цель разговора" /><br>
@@ -132,11 +130,11 @@
 								</section>
                             </section>
                         </div>
-    
-				 				   
-														
-                      
-                
+
+
+
+
+
 
 				<!-- Sidebar -->
 

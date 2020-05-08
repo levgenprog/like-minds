@@ -1,5 +1,5 @@
 <header id="header" class="alt">
-						<h1><a href="index.html">Diploma</a></h1>
+						<h1><a href="index.php">Diploma</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
