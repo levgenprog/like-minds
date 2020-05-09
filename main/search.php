@@ -109,7 +109,11 @@ require 'checks/user_inf.php';
 										<?php
 											if (isset($_POST['search'])) {
 												if (isset($_POST['mycity'])) {
-													
+														$result_q = mysqli_query($mysql, "SELECT * FROM `users`
+														WHERE `country` = '{$current_user['country']}' AND
+														`city` = '{$current_user['city']}'");
+														$result = mysqli_fetch_assoc($result_q);
+														echo $result;
 												}
 												else {
 													echo "It doesn't work";
@@ -135,6 +139,10 @@ require 'checks/user_inf.php';
 														<button class="button main" name="search" type="submit"><a href="../chat/index.php">Поиск</a></button>
 											</div>
 									</form>
+									<div class="col-12">
+										<h2>Результаты поиска</h2>
+
+									</div>
 							</section>
           </section>
       </div>
