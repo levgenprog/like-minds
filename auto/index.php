@@ -16,7 +16,8 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-				<?php include "inc/header.php"; ?>
+                
+              															<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/header1.php"; ?>
 
 				<!-- Banner -->
 					<section id="banner">
@@ -125,7 +126,7 @@
 					</section>
 
 				<!-- Footer -->
-									<?php include "inc/footer.php"; ?>
+															<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/footer1.php"; ?>
 
 
 			</div>

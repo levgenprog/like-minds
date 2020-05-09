@@ -25,47 +25,14 @@ require 'checks/user_inf.php';
 
 
 							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Наши статьи</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="SMART.html" class="image"><img src="images/5.jpg" alt="" /></a>
-											<p>Как сформировать SMART-Цель</p>
-										</article>
-										<article>
-											<a href="ЦЗД.html" class="image"><img src="images/6.jpg" alt="" /></a>
-											<p>Система Цели-Задачи-Действия</p>
-										</article>
-										<article>
-											<a href="matrix.html" class="image"><img src="images/88.jpg" alt="" /></a>
-											<p>Матрица Эйзенхауэра</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="SMART.html" class="button">Читать</a></li>
-									</ul>
-								</section>
+															<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/footer.php"; ?>
+
 
 							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Связаться с нами</h2>
-									</header>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">migourgoals@gmail.com</a></li>
-										<li class="icon solid fa-phone">(747) 259 79 62</li>
-										<li class="icon solid fa-home">Almaty<br />
-										</li>
-									</ul>
-								</section>
+							
 
 							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
-								</footer>
-
+								
 						</div>
 					</div>
 				<!-- Main -->
@@ -73,16 +40,8 @@ require 'checks/user_inf.php';
 						<div class="inner">
 
 							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА</strong> АМБИЦИОЗНЫХ ЛЮДЕЙ</a>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-									</ul>
-								</header>
+															<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/header.php"; ?>
+
 
 							<!-- Content -->
 								<section>
@@ -146,11 +105,6 @@ require 'checks/user_inf.php';
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+			
 	</body>
 </html>

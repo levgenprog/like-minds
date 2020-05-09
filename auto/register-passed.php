@@ -17,7 +17,7 @@ require '../main/checks/user_inf.php';
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Регистрация</a></h1>
+						<h1><a href="index.php">Регистрация</a></h1>
 					</header>
 
 				<!-- Banner -->
@@ -38,7 +38,7 @@ require '../main/checks/user_inf.php';
                      ?>
                    <?=$current_user['user_name']?></h3>
               <ul class="actions special">
-								<li><a href="../Edit/personal.php" class="button primary">Перейти в личный кабинет</a></li>
+								<li><a href="../main/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>
 
 						</div>
