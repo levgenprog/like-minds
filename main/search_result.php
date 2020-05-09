@@ -103,28 +103,32 @@ require 'checks/user_inf.php';
                   </ul>
 									</nav>
 								</section><br><br>
-											<h2>Поиск единомышленников</h2>
+                <ul class="actions">
+                    <li><a href="search.php" class="button big">Вернуться <strong>в настройки поиска</strong></a></li>
+                </ul>
+											<h2>Результаты поиска</h2>
 								<section class="alt">
-									<form method="post" action="search_result.php">
-										<div class="col-12">
-														<select name="demo-category" id="demo-category">
-															<option value="">- Выберите категорию  -</option>
-															<option value="1">Образование</option>
-														</select>
-	                        <hr class="minor" />
-															<select name="demo-category" id="demo-category">
-																<option value="">- Выберите подкатегорию  -</option>
-																<option value="1">Менеджмент</option>
-	                              <option value="1">Маркетинг</option>
-	                              <option value="1">Программирование</option>
-															</select>
-	                         <hr class="minor" />
-														<input type="text" name="goal" id="goal" placeholder="Цель разговора" /><br>
-														<input type="checkbox" name="mycity" value="yes" checked>
-																<label for="mycity">Искать в моем городе</label> <br><br>
-														<button class="button main" name="search" type="submit">Поиск</button>
-											</div>
-									</form>
+										<?php
+											if (isset($_POST['search'])) {
+												if (isset($_POST['mycity'])) {
+														$result_q = mysqli_query($mysql, "SELECT * FROM `users`
+														WHERE `country` = '{$current_user['country']}' AND
+														`city` = '{$current_user['city']}' AND
+														`id` <> '{$current_user['id']}'");
+												}
+												else {
+													echo "It doesn't work";
+												}
+											}
+										while ($result = mysqli_fetch_assoc($result_q)) {
+											?>
+											<div class="col-12">
+												<p><?php echo $result['user_name'] . ' ' . $result['country'] . ' ' . ' ' . $result['city']; ?></p>
+                        <button type="button" class="button main"> <a href="../chat/index.php">Перейти к диалогу</a> </button>
+											</div><br>
+									<?php
+										}
+									 ?>
 									</div>
 							</section>
           </section>

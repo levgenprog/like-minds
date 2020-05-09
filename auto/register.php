@@ -87,7 +87,7 @@
 
 												 	setcookie('user', $user['id'], time() + 3600, "/");
 
-												 header ('Location:../Spectral/register-passed.php');
+												 header ('Location:../auto/register-passed.php');
 
 											}else {
 												echo $errors['0'];
