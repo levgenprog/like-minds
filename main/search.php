@@ -98,42 +98,54 @@ require 'checks/user_inf.php';
 									<ul>
 										<li><a href="personal.php">Личный кабинет</a></li>
 										<li><a href="../chat/index.php">Мессенджер</a></li>
-										<li><a href="Minded.html">Поиск Единомышленников</a></li>
-										<li><a href="../Spectral/exit.php">Выход</a></li>
-                                    </ul>
+										<li><a href="search.php">Поиск Единомышленников</a></li>
+										<li><a href="../auto/exit.php">Выход</a></li>
+                  </ul>
 									</nav>
 								</section><br><br>
 											<h2>Поиск единомышленников</h2>
-									<div class="col-12">
-																<select name="demo-category" id="demo-category">
-																	<option value="">- Выберите категорию  -</option>
-																	<option value="1">Образование</option>
-																</select>
-															</div>
-                                    <div class="col-12">
-                                        									<hr class="minor" />
-
-																<select name="demo-category" id="demo-category">
-																	<option value="">- Выберите подкатегорию  -</option>
-																	<option value="1">Менеджмент</option>
-                                                                    <option value="1">Маркетинг</option>
-                                                                    <option value="1">Программирование</option>
-																</select>
-															</div>
-                                    <hr class="minor" />
-
-                                    <section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Цель разговора" /><br>
-										<button class="button main"><a href="../chat/index.php">Поиск</a></button>
+								<section class="alt">
+									<form method="post" action="search.php#demo-category">
+										<?php
+											if (isset($_POST['search'])) {
+												if (isset($_POST['mycity'])) {
+														$result_q = mysqli_query($mysql, "SELECT * FROM `users`
+														WHERE `country` = '{$current_user['country']}' AND
+														`city` = '{$current_user['city']}'");
+														$result = mysqli_fetch_assoc($result_q);
+														echo $result;
+												}
+												else {
+													echo "It doesn't work";
+												}
+											}
+										 ?>
+										<div class="col-12">
+														<select name="demo-category" id="demo-category">
+															<option value="">- Выберите категорию  -</option>
+															<option value="1">Образование</option>
+														</select>
+	                        <hr class="minor" />
+															<select name="demo-category" id="demo-category">
+																<option value="">- Выберите подкатегорию  -</option>
+																<option value="1">Менеджмент</option>
+	                              <option value="1">Маркетинг</option>
+	                              <option value="1">Программирование</option>
+															</select>
+	                         <hr class="minor" />
+														<input type="text" name="goal" id="goal" placeholder="Цель разговора" /><br>
+														<input type="checkbox" name="mycity" value="yes" checked>
+																<label for="mycity">Искать в моем городе</label> <br><br>
+														<button class="button main" name="search" type="submit"><a href="../chat/index.php">Поиск</a></button>
+											</div>
 									</form>
-								</section>
-                            </section>
-                        </div>
+									<div class="col-12">
+										<h2>Результаты поиска</h2>
 
-
-
-
+									</div>
+							</section>
+          </section>
+      </div>
 
 
 				<!-- Sidebar -->

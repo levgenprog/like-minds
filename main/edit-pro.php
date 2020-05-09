@@ -96,8 +96,8 @@ require 'checks/user_inf.php';
 									<ul>
 										<li><a href="personal.php">Личный кабинет</a></li>
 										<li><a href="../chat/index.php">Мессенджер</a></li>
-										<li><a href="Minded.html">Поиск Единомышленников</a></li>
-										<li><a href="../Spectral/exit.php">Выход</a></li>
+										<li><a href="search.php">Поиск Единомышленников</a></li>
+										<li><a href="../auto/exit.php">Выход</a></li>
                                     </ul>
 									</nav><br>
 
