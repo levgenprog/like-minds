@@ -123,6 +123,7 @@ require 'checks/user_inf.php';
 										while ($result = mysqli_fetch_assoc($result_q)) {
 											?>
 											<div class="col-12">
+												<img class="search_picture" src="images/profile_photos/<?php echo $result['photo']; ?>" alt="" >
 												<p><?php echo $result['user_name'] . ' ' . $result['country'] . ' ' . ' ' . $result['city']; ?></p>
                         <button type="button" class="button main"> <a href="../chat/index.php">Перейти к диалогу</a> </button>
 											</div><br>

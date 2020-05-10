@@ -116,7 +116,7 @@ require 'checks/user_inf.php';
 										border: 3px solid #800000;
 										}
 									</style>
-                  <span class="image right"> <img src="images/Napoleon-1.jpg" alt="" > </span>
+                  <span class="image right profile"> <img src="images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
 
 									<hr class="major" />
 								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$current_user['user_name']?></b></h4>
@@ -132,6 +132,9 @@ require 'checks/user_inf.php';
 											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
 										</ul>
 									</div>
+									
+
+
 
 <!--Use not here
                   <h4>Ваши интересы - 10 направлений</h4>

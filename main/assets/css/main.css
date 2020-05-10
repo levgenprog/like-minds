@@ -1219,7 +1219,7 @@ input[type="radio"] + label:before {
   .image img {
     border-radius: 0.375em;
     display: block; }
-  .image.left, .image.right {
+  .image.left, .image.right, .image.right.profile {
     max-width: 40%; }
     .image.left img, .image.right img {
       width: 100%; }
@@ -1243,6 +1243,9 @@ input[type="radio"] + label:before {
     width: 100%; }
     .image.main img {
       width: 100%; }
+      .image.right.profile{
+        height: 100px;
+      }
 
 a.image {
   overflow: hidden; }
@@ -2274,4 +2277,9 @@ button,
 .user_about{
 font-style: normal;
 font-weight: 400;
+}
+.search_picture{
+  width: 10%;
+  height: 20%;
+  border-radius: 50%;
 }

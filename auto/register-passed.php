@@ -38,7 +38,7 @@ require '../main/checks/user_inf.php';
                      ?>
                    <?=$current_user['user_name']?></h3>
               <ul class="actions special">
-								<li><a href="../Edit/personal.php" class="button primary">Перейти в личный кабинет</a></li>
+								<li><a href="../main/personal.php" class="button primary">Перейти в личный кабинет</a></li>
 							</ul>
 
 						</div>
