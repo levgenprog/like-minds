@@ -106,7 +106,7 @@ require 'checks/user_inf.php';
                 <ul class="actions">
                     <li><a href="search.php" class="button big">Вернуться <strong>в настройки поиска</strong></a></li>
                 </ul>
-											<h2>Результаты поиска</h2>
+											<h2 id="here">Результаты поиска</h2>
 								<section class="alt">
 										<?php
 											if (isset($_POST['search'])) {
@@ -122,9 +122,9 @@ require 'checks/user_inf.php';
 											}
 										while ($result = mysqli_fetch_assoc($result_q)) {
 											?>
-											<div class="col-12">
+											<div class="result">
+												<solid><b><?php echo $result['user_name'] . ' ' . $result['country'] . ' ' . ' ' . $result['city']; ?></b></solid><br><br>
 												<img class="search_picture" src="images/profile_photos/<?php echo $result['photo']; ?>" alt="" >
-												<p><?php echo $result['user_name'] . ' ' . $result['country'] . ' ' . ' ' . $result['city']; ?></p>
                         <button type="button" class="button main"> <a href="../chat/index.php">Перейти к диалогу</a> </button>
 											</div><br>
 									<?php

@@ -105,7 +105,7 @@ require 'checks/user_inf.php';
 								</section><br><br>
 											<h2>Поиск единомышленников</h2>
 								<section class="alt">
-									<form method="post" action="search_result.php">
+									<form method="post" action="search_result.php#here">
 										<div class="col-12">
 														<select name="demo-category" id="demo-category">
 															<option value="">- Выберите категорию  -</option>
