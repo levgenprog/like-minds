@@ -1,6 +1,5 @@
 <?php
 require 'checks/user_inf.php';
-require 'checks/load_photo.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -103,16 +102,19 @@ require 'checks/load_photo.php';
 									</nav><br>
 
 									<header class="main">
-										<h1>Редактирование профиля</h1>
+										<h1 id="here">Редактирование профиля</h1>
 									</header>
+									<?php
+										require 'checks/load_photo.php';
+									 ?>
 									<h3 align="right">Редактировать фото вашего профиля</h3>
-										<form align="right" action="#" method="post" enctype="multipart/form-data">
+										<form align="right" action="#here" method="post" enctype="multipart/form-data">
 												<input class="button" type="file" name="uploadfile"><br><br>
 												<button class="button main" name="upload" type="submit">Сохранить</button>
 										</form>
 
 
-                  <span id="img" class="image right"> <img src="images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
+                  <span id="img" class="image right profile"> <img src="images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
 
 									<hr class="major"/>
 									<form method="get" action="edit-pro.php#img">

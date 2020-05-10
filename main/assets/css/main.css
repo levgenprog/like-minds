@@ -1220,7 +1220,8 @@ input[type="radio"] + label:before {
     border-radius: 0.375em;
     display: block; }
   .image.left, .image.right, .image.right.profile {
-    max-width: 40%; }
+    width: 40%;
+    height: 40%;}
     .image.left img, .image.right img {
       width: 100%; }
   .image.left {
@@ -1243,9 +1244,7 @@ input[type="radio"] + label:before {
     width: 100%; }
     .image.main img {
       width: 100%; }
-      .image.right.profile{
-        height: 100px;
-      }
+
 
 a.image {
   overflow: hidden; }

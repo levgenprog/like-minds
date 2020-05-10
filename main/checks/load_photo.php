@@ -25,9 +25,6 @@ require 'user_inf.php';
 
 
             }
-         else {
-           echo $photo_name;
-         }
        }
        //}
     }elseif ($_FILES['uploadfile']['size'] == 0) {
