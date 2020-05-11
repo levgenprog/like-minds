@@ -64,17 +64,7 @@ require 'checks/user_inf.php';
 								</section><br><br>
 											<h2>Поиск единомышленников</h2>
 								<section class="alt">
-									<form method="post" action="search.php#demo-category">
-										<?php
-											if (isset($_POST['search'])) {
-												if (isset($_POST['mycity'])) {
-													
-												}
-												else {
-													echo "It doesn't work";
-												}
-											}
-										 ?>
+									<form method="post" action="search_result.php#here">
 										<div class="col-12">
 														<select name="demo-category" id="demo-category">
 															<option value="">- Выберите категорию  -</option>
@@ -91,9 +81,10 @@ require 'checks/user_inf.php';
 														<input type="text" name="goal" id="goal" placeholder="Цель разговора" /><br>
 														<input type="checkbox" name="mycity" value="yes" checked>
 																<label for="mycity">Искать в моем городе</label> <br><br>
-														<button class="button main" name="search" type="submit"><a href="../chat/index.php">Поиск</a></button>
+														<button class="button main" name="search" type="submit">Поиск</button>
 											</div>
 									</form>
+									</div>
 							</section>
           </section>
       </div>
