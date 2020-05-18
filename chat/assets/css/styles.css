@@ -6,22 +6,24 @@
     padding: 0;
 }
 
-body{
+/*body{
     color: #4B535C;
     font:13px Arial, Helvetica, sans-serif;
-    padding-top:40px;
-}
+    padding-top: 0px;
+    overflow: auto;
+}*/
 
 /* ------- The main content ------- */
 
 .shoutbox {
     max-width: 474px;
+    /*max-height: 600px;*/
     margin: 0 auto;
-    overflow: hidden;
+    
 }
 
-h1 {
-    background-color:  #87bfef;
+.your_messages {
+    background-color:  #f56a6a;
     box-shadow: 0px 1px 1px 0.00px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: relative;
@@ -35,13 +37,14 @@ h1 {
     line-height: 46px;
 }
 
+
 h1 img {
     position: absolute;
     top: 13px;
     right: 35px;
     width: 17px;
     height: 18px;
-    float:right;
+    float: right;
     cursor: pointer;
 }
 
@@ -113,7 +116,7 @@ h1 img {
 
 /* ------- Writing a new comment form ------- */
 
-h2 {
+.messages {
     position: relative;
     background-color:  #f9fafb;
     border-bottom: 2px solid #e2e8eb;
@@ -158,7 +161,7 @@ h2 span {
     width: 80px;
     height: 11px;
     line-height: 11px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .shoutbox-form form .shoutbox-comment-label {
@@ -202,8 +205,8 @@ h2 span {
 }
 
 .shoutbox-form form input[type=submit] {
-    background-color: #87bfef;
-    border: 1px solid #e6e7e8;
+    background-color: #f56a6a;
+    border: 1px solid #f57f6f;
     box-shadow: 0px 1px 2px 0.00px rgba(0, 0, 0, 0.1);
     width: 110px;
     height: 41px;
@@ -230,7 +233,7 @@ h2 span {
 }
 
 
-/* ------- Demo footer. Please ignore and remove ------- */
+/* ------- Demo footer. Please ignore and remove ------- 
 
 footer {
     font: normal 16px Arial, Helvetica, sans-serif;
@@ -304,4 +307,4 @@ footer #tzine-actions iframe{
 
 @media (max-width: 1024px) {
     #bsaHolder, footer{ display:none;}
-}
+}*/

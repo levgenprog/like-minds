@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -21,7 +21,7 @@
 						<div class="inner">
 
 							<!-- Header -->
-							<?php include "inc1/header1.php"; ?>
+							<?php include "inc/header.php"; ?>
 
 							<!-- Banner -->
 								<section id="banner">

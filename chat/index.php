@@ -1,3 +1,6 @@
+<?php
+require '../main/checks/user_inf.php';
+?>
 <!DOCTYPE html>
 <html>
 <!--Тест Евжения-->
@@ -18,17 +21,17 @@
      <!--Beggining-->
         <div class="shoutbox">
 
-            <h1>Ваши сообщения <img src='./assets/img/refresh.png'/></h1>
+            <h1 class="your_messages">Ваши сообщения <img src='./assets/img/refresh.png'/></h1>
 
             <ul class="shoutbox-content"></ul>
 
             <div class="shoutbox-form">
-                <h2>Напишите сообщение<span>×</span></h2>
+                <h2 class="messages">Напишите сообщение<span>×</span></h2>
 
                 <form action="./publish.php" method="post">
-                    <label for="shoutbox-name"><?=$_COOKIE['user']?></label><br><br> <input type="text" id="shoutbox-name" value="<?=$_COOKIE['user']?>" name="name"/>
+                    <label for="shoutbox-name"><?=$current_user['user_name']?></label><br><br> <input type="text" id="shoutbox-name" value="<?=$current_user['user_name']?>" name="name"/>
                     <label class="shoutbox-comment-label" for="shoutbox-comment">Сообщение</label> <textarea id="shoutbox-comment" name="comment" maxlength='240'></textarea>
-                    <input type="submit" value="Отправить!"/>
+                    <input type="submit" value="Отправить"/>
                 </form>
             </div>
 
