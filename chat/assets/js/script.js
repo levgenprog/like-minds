@@ -89,7 +89,7 @@ $(function(){
     });
 
     // Automatically refresh the shouts every 20 seconds
-    setInterval(load,20000);
+    // setInterval(load,1000);
 
 
     function formOpen(){

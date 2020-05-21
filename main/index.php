@@ -152,7 +152,7 @@
 								</section>
 
 							<!-- Menu -->
-							<?php include "inc1/footer1.php"; ?>
+							<?php include "inc/footer.php"; ?>
 
 						</div>
 					</div>
