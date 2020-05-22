@@ -25,7 +25,7 @@ require 'checks/user_inf.php';
 
 
 							<!-- Section -->
-														<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/footer.php"; ?>
+														<?php include "../inc/footer.php"; ?>
 
 						</div>
 					</div>
@@ -34,7 +34,7 @@ require 'checks/user_inf.php';
 						<div class="inner">
 
 							<!-- Header -->
-														<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/header.php"; ?>
+														<?php include "../inc/header.php"; ?>
 
 
 							<!-- Content -->
@@ -163,6 +163,6 @@ require 'checks/user_inf.php';
 			</div>
 
 		<!-- Scripts -->
-			
+
 	</body>
 </html>

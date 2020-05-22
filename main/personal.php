@@ -25,13 +25,13 @@ require 'checks/user_inf.php';
 
 
 							<!-- Section -->
-														<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/footer.php"; ?>
+														<?php include "../inc/footer.php"; ?>
 
 
 							<!-- Section -->
-								
+
 							<!-- Footer -->
-							
+
 						</div>
 					</div>
 				<!-- Main -->
@@ -39,11 +39,11 @@ require 'checks/user_inf.php';
 						<div class="inner">
 
 							<!-- Header -->
-								
-                            <?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/header.php"; ?>
+
+                            <?php include "../inc/header.php"; ?>
 
 							<!-- Menu -->
-								
+
                             <nav id="menu">
 									<header class="major">
 										<h2>Меню</h2>
@@ -91,7 +91,7 @@ require 'checks/user_inf.php';
 											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
 										</ul>
 									</div>
-									
+
 
 
 
@@ -153,7 +153,7 @@ require 'checks/user_inf.php';
 							<!-- Footer
 								<footer id="footer">
 									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
-									
+
 								</footer>-->
 
 						</div>
@@ -162,7 +162,7 @@ require 'checks/user_inf.php';
 			</div>
 
 		<!-- Scripts -->
-			
+
 
 	</body>
 </html>
