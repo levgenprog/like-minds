@@ -152,7 +152,7 @@
 								</section>
 
 							<!-- Menu -->
-							<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/footer.php"; ?>
+							<?php include "inc/footer.php"; ?>
 
 						</div>
 					</div>

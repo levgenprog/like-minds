@@ -2291,18 +2291,30 @@ font-weight: 400;
 .result.button.main{
   margin-left: 10px;
 }
-/*я вас не звал*/
+/*Мессенджер*/
 .shoutbox {
-	margin: 0 auto;
-	/*max-height: 200px;*/ 
-    overflow: inherit;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 auto;
+  max-width: inherit;
+  max-height: 600px; 
+  overflow: auto;}
+  @media screen and (max-width: 1680px) {
+    .shoutbox {
+      padding-top: 5em; } }
+  @media screen and (max-width: 736px) {
+    .shoutbox {
+      padding-top: 6.5em; }
+    
 }
 
 .your_messages {
     background-color:  #f56a6a;
     box-shadow: 0px 1px 1px 0.00px rgba(0, 0, 0, 0.1);
     width: 100%;
-    position: relative;
+    position: fixed;
     height: 46px;
     text-align: left;
     margin: 0;
@@ -2396,7 +2408,7 @@ h1 img {
     position: relative;
     background-color:  #f9fafb;
     border-bottom: 2px solid #e2e8eb;
-    max-width: 100%;
+    max-width: inherit;
     height: 45px;
     margin: 0;
     text-align: center;
@@ -2423,7 +2435,7 @@ h2 span {
     display: none;
     background-color:  #f9fafb;
     box-shadow: 0px 2px 0px 0.00px #e2e8eb;
-    max-width: 100%;
+    max-width: inherit;
     text-align: left;
     padding: 20px 20px 30px;
 }
@@ -2451,7 +2463,7 @@ h2 span {
     box-shadow: 1px 3px 0px 0.00px rgba(0, 0, 0, 0.04);
     border: 1px solid #bfcdda;
     outline: none;
-    max-width: 170px;
+    max-width: inherit;
     width: 100%;
     height: 41px;
     font-size: 14px;
@@ -2467,10 +2479,9 @@ h2 span {
     box-shadow: 1px 3px 0px 0.00px rgba(0, 0, 0, 0.04);
     border: 1px solid #bfcdda;
     outline: none;
-    /*max-width: 500px;*/
+    max-width: inherit;
     width: 100%;
     height: 76px;
-    /*margin-top: 15px;*/
     margin-bottom: 20px;
     resize: none;
     font-weight: normal;

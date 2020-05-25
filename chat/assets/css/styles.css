@@ -201,7 +201,7 @@ h2 span {
     font-size: 14px;
     padding: 10px;
     box-sizing: border-box;
-    color:inherit;
+    color: inherit;
 }
 
 .shoutbox-form form input[type=submit] {
