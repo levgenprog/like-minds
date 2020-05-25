@@ -34,7 +34,7 @@ require 'checks/user_inf.php';
 						<div class="inner">
 
 							<!-- Header -->
-														<?php include "../inc/header.php"; ?>
+										<?php include "../inc/header.php"; ?>
 
 
 							<!-- Content -->
@@ -42,17 +42,8 @@ require 'checks/user_inf.php';
 
 									<!-- Menu -->
 								<section id="search" class="alt">
-									<nav id="menu">
-									<header class="major">
-										<h2>Меню</h2>
-									</header>
-									<ul>
-										<li><a href="personal.php">Личный кабинет</a></li>
-										<li><a href="../chat/index.php">Мессенджер</a></li>
-										<li><a href="search.php">Поиск Единомышленников</a></li>
-										<li><a href="../auto/exit.php">Выход</a></li>
-                                    </ul>
-									</nav><br>
+									
+									<?php include "../inc/menu.php"; ?>
 
 									<header class="main">
 										<h1 id="here">Редактирование профиля</h1>

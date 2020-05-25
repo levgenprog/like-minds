@@ -23,15 +23,7 @@ require 'checks/user_inf.php';
 									</form>
 								</section>
 
-
-							<!-- Section -->
 														<?php include "../inc/footer.php"; ?>
-
-
-							<!-- Section -->
-
-							<!-- Footer -->
-
 						</div>
 					</div>
 				<!-- Main -->
@@ -40,21 +32,9 @@ require 'checks/user_inf.php';
 
 							<!-- Header -->
 
-                            <?php include "../inc/header.php"; ?>
+          <?php include "../inc/header.php"; ?>
 
-							<!-- Menu -->
-
-                            <nav id="menu">
-									<header class="major">
-										<h2>Меню</h2>
-									</header>
-									<ul>
-										<li><a href="personal.php">Личный кабинет</a></li>
-										<li><a href="../chat/index.php">Мессенджер</a></li>
-										<li><a href="search.php">Поиск Единомышленников</a></li>
-										<li><a href="../auto/exit.php">Выход</a></li>
-                  </ul>
-								</nav><br><br>
+							<?php include "../inc/menu.php"; ?>
 
 								<!-- Content -->
 
@@ -75,7 +55,7 @@ require 'checks/user_inf.php';
 										border: 3px solid #800000;
 										}
 									</style>
-                  <span class="image right profile"> <img src="images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
+                  <span class="image right profile"> <img src="/sup-progress.kz/main/images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
 
 									<hr class="major" />
 								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$current_user['user_name']?></b></h4>

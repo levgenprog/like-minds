@@ -2,11 +2,6 @@
 require '../main/checks/user_inf.php';
 ?>
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
 	<title>Diploma</title>
@@ -23,7 +18,7 @@ require '../main/checks/user_inf.php';
 		<div id="main">
 			<div class="inner">
 				<!-- Header -->
-				<?php include "../main/inc/header.php"; ?>
+				<?php include "../inc/header.php"; ?>
 
 				<section>
 					<div class="contetn">
@@ -54,7 +49,7 @@ require '../main/checks/user_inf.php';
 						</form>
 					</section>
 					<!-- Menu -->
-					<?php include "../main/inc/footer.php"; ?>
+					<?php include "../inc/footer.php"; ?>
 				</div>
 			</div>
 		</div>

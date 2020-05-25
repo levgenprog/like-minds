@@ -17,7 +17,7 @@
 
 				<!-- Header -->
 
-              															<?php include "../inc/header1.php"; ?>
+      <?php include "../inc/header1.php"; ?>
 
 				<!-- Banner -->
 					<section id="banner">
@@ -126,7 +126,7 @@
 					</section>
 
 				<!-- Footer -->
-															<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/footer1.php"; ?>
+															<?php include "../inc/footer1.php"; ?>
 
 
 			</div>
