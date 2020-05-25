@@ -16,8 +16,7 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-
-      <?php include "../inc/header1.php"; ?>
+				<?php include "inc/header.php"; ?>
 
 				<!-- Banner -->
 					<section id="banner">
@@ -126,7 +125,7 @@
 					</section>
 
 				<!-- Footer -->
-															<?php include "../inc/footer1.php"; ?>
+									<?php include "inc/footer.php"; ?>
 
 
 			</div>

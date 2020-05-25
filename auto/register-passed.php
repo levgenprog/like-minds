@@ -17,7 +17,7 @@ require '../main/checks/user_inf.php';
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.php">Регистрация</a></h1>
+						<h1><a href="index.html">Регистрация</a></h1>
 					</header>
 
 				<!-- Banner -->

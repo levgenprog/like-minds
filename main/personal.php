@@ -23,7 +23,49 @@ require 'checks/user_inf.php';
 									</form>
 								</section>
 
-														<?php include "../inc/footer.php"; ?>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Наши статьи</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="SMART.html" class="image"><img src="images/5.jpg" alt="" /></a>
+											<p>Как сформировать SMART-Цель</p>
+										</article>
+										<article>
+											<a href="ЦЗД.html" class="image"><img src="images/6.jpg" alt="" /></a>
+											<p>Система Цели-Задачи-Действия</p>
+										</article>
+										<article>
+											<a href="matrix.html" class="image"><img src="images/88.jpg" alt="" /></a>
+											<p>Матрица Эйзенхауэра</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="SMART.html" class="button">Читать</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Связаться с нами</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">migourgoals@gmail.com</a></li>
+										<li class="icon solid fa-phone">(747) 259 79 62</li>
+										<li class="icon solid fa-home">Almaty<br />
+										</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
+								</footer>
+
 						</div>
 					</div>
 				<!-- Main -->
@@ -31,10 +73,29 @@ require 'checks/user_inf.php';
 						<div class="inner">
 
 							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА</strong> АМБИЦИОЗНЫХ ЛЮДЕЙ</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header><br>
 
-          <?php include "../inc/header.php"; ?>
-
-							<?php include "../inc/menu.php"; ?>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Меню</h2>
+									</header>
+									<ul>
+										<li><a href="personal.php">Личный кабинет</a></li>
+										<li><a href="../chat/index.php">Мессенджер</a></li>
+										<li><a href="search.php">Поиск Единомышленников</a></li>
+										<li><a href="../auto/exit.php">Выход</a></li>
+                  </ul>
+								</nav><br><br>
 
 								<!-- Content -->
 
@@ -55,7 +116,7 @@ require 'checks/user_inf.php';
 										border: 3px solid #800000;
 										}
 									</style>
-                  <span class="image right profile"> <img src="/sup-progress.kz/main/images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
+                  <span class="image right profile"> <img src="images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
 
 									<hr class="major" />
 								    <h4 class="user_about">Ваше имя: &nbsp;<b><?=$current_user['user_name']?></b></h4>
@@ -71,7 +132,7 @@ require 'checks/user_inf.php';
 											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
 										</ul>
 									</div>
-
+									
 
 
 
@@ -133,7 +194,15 @@ require 'checks/user_inf.php';
 							<!-- Footer
 								<footer id="footer">
 									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
-
+									<header class="major">
+										<h2>Связаться с нами</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">migourgoals@gmail.com</a></li>
+										<li class="icon solid fa-phone">(747) 259 79 62</li>
+										<li class="icon solid fa-home">Almaty<br />
+										</li>
+									</ul>
 								</footer>-->
 
 						</div>
@@ -142,7 +211,11 @@ require 'checks/user_inf.php';
 			</div>
 
 		<!-- Scripts -->
-
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
