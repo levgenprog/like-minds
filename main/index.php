@@ -21,7 +21,7 @@
 						<div class="inner">
 
 							<!-- Header -->
-							<?php include "D:/Xampp/htdocs/heir/sup-proggress.kz/inc/header.php"; ?>
+							<?php include "inc/header.php"; ?>
 
 							<!-- Banner -->
 								<section id="banner">
@@ -32,10 +32,10 @@
 										</header>
                                         <blockquote>"В трудные времена опыт может вас не спасти. Не спасут и трудолюбие и талант. Если вам нужна работа, деньги, хороший совет, помощь или надежда, есть только одно надежное средство – <strong>широкий круг ваших друзей и знакомых."</strong><br /><strong> © Кейт Феррацци, Тал Рэз "Никогда не ешьте в одиночку и другие правила нетворкинга"</strong> </blockquote>
 										<ul class="actions">
-											<li><a href="personal.php" class="button big">Перейти в <strong>личный кабинет</strong></a></li>
+											<li><a href="Личный-Кабинет.html" class="button big">Перейти в <strong>личный кабинет</strong></a></li>
 										</ul>
                                         <ul class="actions">
-											<li><a href="search.php" class="button big">Найти <strong>Единомышленников</strong></a></li>
+											<li><a href="Minded.html" class="button big">Найти <strong>Единомышленников</strong></a></li>
 										</ul>
 									</div>
 									<span class="image object">
@@ -87,35 +87,35 @@
 									</header>
 									<div class="posts">
 										<article>
-											<a href="SMART.php" class="image"><img src="images/5.jpg" alt="" /></a>
+											<a href="SMART.html" class="image"><img src="images/5.jpg" alt="" /></a>
 											<h3>Как сформировать SMART-Цель</h3>
 											<p>Система для максимальной конкретизации вашей мечты</p>
 											<ul class="actions">
-												<li><a href="SMART.php" class="button">Читать</a></li>
+												<li><a href="SMART.html" class="button">Читать</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="goals.php" class="image"><img src="images/6.jpg" alt="" /></a>
+											<a href="ЦЗД.html" class="image"><img src="images/6.jpg" alt="" /></a>
 											<h3>Система Цели-Задачи-Действия</h3>
 											<p>Когда список дел кажется непосильным, на помощь приходит данная система, которая упростит даже самую комплексную деятельность</p>
 											<ul class="actions">
-												<li><a href="goals.php" class="button">Читать</a></li>
+												<li><a href="ЦЗД.html" class="button">Читать</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="ABC.php" class="image"><img src="images/7.jpg" alt="" /></a>
+											<a href="ABC.html" class="image"><img src="images/7.jpg" alt="" /></a>
 											<h3>Система приоритезаций ABC</h3>
 											<p>Наука о последовательности решений задач не так проста, как кажется</p>
 											<ul class="actions">
-												<li><a href="ABC.php" class="button">Читать</a></li>
+												<li><a href="ABC.html" class="button">Читать</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="matrix.php" class="image"><img src="images/88.jpg" alt="" /></a>
+											<a href="matrix.html" class="image"><img src="images/88.jpg" alt="" /></a>
 											<h3>Матрица Эйзенхауэра в деталях</h3>
 											<p>Что позволяло президенту США добиваться больших побед?</p>
 											<ul class="actions">
-												<li><a href="matrix.php" class="button">Читать</a></li>
+												<li><a href="matrix.html" class="button">Читать</a></li>
 											</ul>
 										</article>
 										<article>
@@ -160,6 +160,11 @@
 			</div>
 
 		<!-- Scripts -->
-		
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
 	</body>
 </html>
