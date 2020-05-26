@@ -55,7 +55,7 @@ require 'checks/user_inf.php';
 									</header>
 									<ul class="contact">
 										<li class="icon solid fa-envelope"><a href="#">migourgoals@gmail.com</a></li>
-										<li class="icon solid fa-phone">(747) 259 79 62</li>
+										<li class="icon solid fa-phone">+ (747) 259 79 62</li>
 										<li class="icon solid fa-home">Almaty<br />
 										</li>
 									</ul>
@@ -91,8 +91,8 @@ require 'checks/user_inf.php';
 									</header>
 									<ul>
 										<li><a href="personal.php">Личный кабинет</a></li>
-										<li><a href="../chat/index.php">Мессенджер</a></li>
 										<li><a href="search.php">Поиск Единомышленников</a></li>
+										<li><a href="../chat/index-chat.php">Сообщения</a></li>
 										<li><a href="../auto/exit.php">Выход</a></li>
                   </ul>
 								</nav><br><br>
