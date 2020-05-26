@@ -7,6 +7,7 @@
 										<li><a href="index.html">Главная страница</a></li>
 										<li><a href="Личный-Кабинет.html">Личный кабинет</a></li>
 										<li><a href="Minded.html">Поиск Единомышленников</a></li>
+										<li><a href="../chat/chat-index.php">Сообщения</a></li>
                                     </ul>
 								</nav>
 
@@ -17,15 +18,15 @@
 									</header>
 									<div class="mini-posts">
 										<article>
-											<a href="SMART.html" class="image"><img src="images/5.jpg" alt="" /></a>
+											<a href="SMART.html" class="image"><img src="../main/images/5.jpg" alt="" /></a>
 											<p>Как сформировать SMART-Цель</p>
 										</article>
 										<article>
-											<a href="ЦЗД.html" class="image"><img src="images/6.jpg" alt="" /></a>
+											<a href="ЦЗД.html" class="image"><img src="../main/images/6.jpg" alt="" /></a>
 											<p>Система Цели-Задачи-Действия</p>
 										</article>
 										<article>
-											<a href="matrix.html" class="image"><img src="images/88.jpg" alt="" /></a>
+											<a href="matrix.html" class="image"><img src="../main/images/88.jpg" alt="" /></a>
 											<p>Матрица Эйзенхауэра</p>
 										</article>
 									</div>

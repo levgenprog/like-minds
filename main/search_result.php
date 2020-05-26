@@ -55,7 +55,7 @@ require 'checks/user_inf.php';
 									</header>
 									<ul class="contact">
 										<li class="icon solid fa-envelope"><a href="#">migourgoals@gmail.com</a></li>
-										<li class="icon solid fa-phone">(747) 259 79 62</li>
+										<li class="icon solid fa-phone">+ (747) 259 79 62</li>
 										<li class="icon solid fa-home">Almaty<br />
 										</li>
 									</ul>
@@ -97,8 +97,8 @@ require 'checks/user_inf.php';
 									</header>
 									<ul>
 										<li><a href="personal.php">Личный кабинет</a></li>
-										<li><a href="../chat/index.php">Мессенджер</a></li>
 										<li><a href="search.php">Поиск Единомышленников</a></li>
+										<li><a href="../chat/index-chat.php">Сообщения</a></li>
 										<li><a href="../auto/exit.php">Выход</a></li>
                   </ul>
 									</nav>
@@ -125,7 +125,7 @@ require 'checks/user_inf.php';
 											<div class="result">
 												<solid><b><?php echo $result['user_name'] . ' ' . $result['country'] . ' ' . ' ' . $result['city']; ?></b></solid><br><br>
 												<img class="search_picture" src="images/profile_photos/<?php echo $result['photo']; ?>" alt="" >
-                        <button type="button" class="button main"> <a href="../chat/index.php">Перейти к диалогу</a> </button>
+                        <button type="button" class="button main"> <a href="../chat/index-chat.php">Перейти к диалогу</a> </button>
 											</div><br>
 									<?php
 										}

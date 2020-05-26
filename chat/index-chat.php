@@ -2,11 +2,7 @@
 require '../main/checks/user_inf.php';
 ?>
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 <head>
 	<title>Diploma</title>
@@ -34,7 +30,6 @@ require '../main/checks/user_inf.php';
 								<h2 class="messages">Написать сообщение<span>×</span></h2>
 								<form action="./publish.php" method="post">
 									<input type="text" id="shoutbox-name" value="<?=$current_user['user_name']?>" name="name"/>
-									<!-- <label class="shoutbox-comment-label" for="shoutbox-comment">Сообщение:</label> -->
 									<textarea id="shoutbox-comment" name="comment"></textarea>
 									<center><input type="submit" class="button" value="Отправить"/></center>
 								</form>
