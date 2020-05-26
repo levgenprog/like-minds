@@ -89,7 +89,7 @@ require 'checks/user_inf.php';
 
 									<!-- Menu -->
 								<section id="search" class="alt">
-									
+
 								<?php include '../inc/menu.php'; ?>
 
 									<header class="main">
@@ -147,12 +147,32 @@ require 'checks/user_inf.php';
 												</div>
 												<hr class="major"/>
 											<h4>Укажите Вашу страну</h4>
-												<input type="text" name="country" id="country"
+												<input type="text" list="country-list" name="country" id="country"
 												value="<?php echo $current_user['country']; ?>" placeholder="Страна" />
+
+												<!--Make a country list editable-->
+												<?php
+														$country_all_q = mysqli_query($mysql, "SELECT DISTINCT `country` FROM `users`");
+														echo "<datalist id='country-list'>";
+														while($object = mysqli_fetch_object($country_all_q)){
+																echo "<option value = '$object->country' > $object->country </option>";
+														}
+														echo "</datalist>";
+												 ?>
 												<hr class="major"/>
 											<h4>Укажите Ваш город</h4>
-												<input type="text" name="city" id="city"
+												<input type="text" list="city-list" name="city" id="city"
 												value="<?php echo $current_user['city']; ?>" placeholder="Город" />
+
+												<!--Make a city list editable-->
+												<?php
+														$city_all_q = mysqli_query($mysql, "SELECT DISTINCT `city` FROM `users`");
+														echo "<datalist id='city-list'>";
+														while($object_city = mysqli_fetch_object($city_all_q)){
+																echo "<option value = '$object_city->city' > $object_city->city </option>";
+														}
+														echo "</datalist>";
+												 ?>
 				             </div>
 									</div>
 									<hr class="major" />
