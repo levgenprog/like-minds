@@ -24,11 +24,11 @@ require '../main/checks/user_inf.php';
 				<section>
 					<div class="contetn">
 						<div class="shoutbox">
-							<h1 class="your_messages">Ваши сообщения <img src='./assets/img/refresh.png'/></h1>
+							<h1 class="your_messages">Ваши сообщения <img src='../assets/img/refresh.png'/></h1>
 							<ul class="shoutbox-content"></ul>
 							<div class="shoutbox-form">
 								<h2 class="messages">Написать сообщение<span>×</span></h2>
-								<form action="./publish.php" method="post">
+								<form action="../publish.php" method="post">
 									<input type="text" id="shoutbox-name" value="<?=$current_user['user_name']?>" name="name"/>
 									<textarea id="shoutbox-comment" name="comment"></textarea>
 									<center><input type="submit" class="button" value="Отправить"/></center>

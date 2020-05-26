@@ -91,17 +91,7 @@ require 'checks/user_inf.php';
 									</header>
                                   <!-- Menu -->
 								<section id="search" class="alt">
-									<nav id="menu">
-									<header class="major">
-										<h2>Меню</h2>
-									</header>
-									<ul>
-										<li><a href="personal.php">Личный кабинет</a></li>
-										<li><a href="search.php">Поиск Единомышленников</a></li>
-										<li><a href="../chat/index-chat.php">Сообщения</a></li>
-										<li><a href="../auto/exit.php">Выход</a></li>
-                  </ul>
-									</nav>
+									<?php include '../inc/menu.php'; ?>
 								</section><br><br>
                 <ul class="actions">
                     <li><a href="search.php" class="button big">Вернуться <strong>в настройки поиска</strong></a></li>
