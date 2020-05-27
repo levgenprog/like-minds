@@ -97,10 +97,18 @@ require 'checks/user_inf.php';
 								<section class="alt">
 									<form method="post" action="search_result.php#here">
 										<div class="col-12">
-														<select name="demo-category" id="demo-category">
-															<option value="">- Выберите категорию  -</option>
-															<option value="1">Образование</option>
-														</select>
+
+											<!--Take the categories from database-->
+											<?php
+												$sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
+												echo "<select name='demo-category' id='demo-category'>";
+													echo "<option value=''>- Выберите категорию  -</option>";
+														while ($cat = mysqli_fetch_object($sql_cat)) {
+															echo "<option value='$cat->name'> $cat->name </option>";
+														}
+												echo "</select>";
+											 ?>
+								
 	                        <hr class="minor" />
 															<select name="demo-category" id="demo-category">
 																<option value="">- Выберите подкатегорию  -</option>

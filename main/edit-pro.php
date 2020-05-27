@@ -181,6 +181,18 @@ require 'checks/user_inf.php';
 								 </div>
 								</form>
 
+								<!--the new forms start here-->
+
+								<?php
+								$sql = "SELECT sub.name\n"
+
+								    . "FROM `subspheres` sub\n"
+
+								    . "JOIN spheres sph on sph.id = sphere_id\n"
+
+								    . "WHERE sphere_id = 12";
+								 ?>
+
 							<!--Not here
                                 <hr class="major" />
                                     <h4>Укажите Ваши интересы - 10 направлений</h4>
