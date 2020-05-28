@@ -1,6 +1,15 @@
 <?php
 require 'checks/user_inf.php';
 ?>
+<?php
+		if ($_GET['sel']) {
+		$sel = (int) $_GET['sel'];
+
+		$sql_sub = mysqli_query($mysql, "SELECT sub.name
+								FROM `subspheres` sub
+								JOIN `spheres` sph on sph.id = sub.sphere_id
+								WHERE `sphere_id` = '$sel'");
+} ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,6 +19,7 @@ require 'checks/user_inf.php';
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -92,6 +102,7 @@ require 'checks/user_inf.php';
                 <!-- Menu -->
 								<section id="search" class="alt">
 									<?php include '../inc/menu.php'; ?>
+
 								</section><br><br>
 											<h2>Поиск единомышленников</h2>
 								<section class="alt">
@@ -101,21 +112,35 @@ require 'checks/user_inf.php';
 											<!--Take the categories from database-->
 											<?php
 												$sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
-												echo "<select name='demo-category' id='demo-category'>";
+												echo "<select name='category' id='category'
+												onchange='var a = this.selectedIndex; getSelected(a);'>";
+
+												//check for matching between cats to keep it filled after the page is reloaded
+
+												if ($sel != 0) {
+													$sop = mysqli_fetch_object(mysqli_query($mysql, "SELECT `name` FROM `spheres` WHERE `id` = '$sel'"));
+													echo "<option value='$sop->name'> $sop->name </option>";
+												}else {
 													echo "<option value=''>- Выберите категорию  -</option>";
+												}
 														while ($cat = mysqli_fetch_object($sql_cat)) {
 															echo "<option value='$cat->name'> $cat->name </option>";
 														}
 												echo "</select>";
 											 ?>
-								
+
 	                        <hr class="minor" />
-															<select name="demo-category" id="demo-category">
-																<option value="">- Выберите подкатегорию  -</option>
-																<option value="1">Менеджмент</option>
-	                              <option value="1">Маркетинг</option>
-	                              <option value="1">Программирование</option>
-															</select>
+
+											<!--Take the subcategories from data base-->
+											<?php
+
+											echo "<select name='demo-category' id='demo-category'>";
+												echo "<option value=''>- Выберите подкатегорию  -</option>";
+													while ($sub_cat = mysqli_fetch_object($sql_sub)) {
+														echo "<option value='$sub_cat->name'> $sub_cat->name </option>";
+												}
+											echo "</select>";
+											 ?>
 	                         <hr class="minor" />
 														<input type="text" name="goal" id="goal" placeholder="Цель разговора" /><br>
 														<input type="checkbox" name="mycity" value="yes" checked>
@@ -135,7 +160,14 @@ require 'checks/user_inf.php';
 			</div>
 
 		<!-- Scripts -->
+
 			<script src="assets/js/jquery.min.js"></script>
+			<script>
+			function getSelected(value) {
+			var sel = encodeURIComponent(value);
+			 window.location.href = 'search.php?sel=' + sel + '#menu';
+			}
+			</script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>

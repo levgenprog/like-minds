@@ -183,50 +183,36 @@ require 'checks/user_inf.php';
 
 								<!--the new forms start here-->
 
-								<?php
-								$sql = "SELECT sub.name\n"
-
-								    . "FROM `subspheres` sub\n"
-
-								    . "JOIN spheres sph on sph.id = sphere_id\n"
-
-								    . "WHERE sphere_id = 12";
-								 ?>
-
-							<!--Not here
+													<form>
+														<div class="row gtr-uniform">
+															<div class="col-6 col-12-xsmall">
                                 <hr class="major" />
                                     <h4>Укажите Ваши интересы - 10 направлений</h4>
-
-                                    <div class="col-12">
-								    <textarea name="demo-message" id="demo-message" placeholder="Что вас вдохновляет?" rows="6"></textarea>
-				             		</div>
+																		<?php
+																		 $sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
+																		 echo "<select name='demo-category' id='demo-category'>";
+																			 echo "<option value=''>- Выберите категорию  -</option>";
+																				 while ($cat = mysqli_fetch_object($sql_cat)) {
+																					 echo "<option value='$cat->name'> $cat->name </option>";
+																				 }
+																		 echo "</select>";
+																		?>
 
                                 <hr class="major" />
                                      <h4>Укажите Ваши SMART-цели по каждому из направлений</h4>
 
-                                    <div class="col-12">
+
 								    <textarea name="demo-message" id="demo-message" placeholder="S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени" rows="6"></textarea>
-				             		</div>
-
-                                <hr class="major" />
-									<h4>Укажите Ваш Email-адрес</h4>
-                                   <form method="post" action="#">
-														<div class="row gtr-uniform">
-															<div class="col-6 col-12-xsmall">
-															<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-															</div> </div> </form>
 
 
-                                    <hr class="major" />
 
-									<h4>Расскажите о себе</h4>
-									<div class="col-12">
-								    <textarea name="demo-message" id="demo-message" placeholder="Умение описать себя в 100 словах - первый шаг к осознанной жизни." rows="6"></textarea>
-				             		</div>
 
--->
+															</div>
+														</div>
+														<hr class="major" />
+														<button class="button main" name="save" type="submit">Сохранить</button>
+											</form>
 							    	</section>
-
 						</div>
 					</div>
 
