@@ -1,6 +1,17 @@
 <?php
 require 'checks/user_inf.php';
 ?>
+<?php
+		if ($_GET['sel']) {
+		$sel = (int) $_GET['sel'];
+
+		$sql_sub = mysqli_query($mysql, "SELECT sub.name
+								FROM `subspheres` sub
+								JOIN `spheres` sph on sph.id = sub.sphere_id
+								WHERE `sphere_id` = '$sel'");
+		$i = 0;
+}
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -108,7 +119,7 @@ require 'checks/user_inf.php';
                   <span id="img" class="image right profile"> <img src="images/profile_photos/<?php echo $current_user['photo']; ?>" alt="" > </span>
 
 									<hr class="major"/>
-									<form method="get" action="edit-pro.php#img">
+									<form method="get" action="edit-pro.php?sel=0#img">
 										<?php
 											if (isset($_GET['save'])) {
 												$name = filter_var(trim($_GET['name']),
@@ -177,40 +188,83 @@ require 'checks/user_inf.php';
 									</div>
 									<hr class="major" />
 									<div class="actions special">
-									 <button class="button main" name="save" type="submit">Сохранить</button>
+									 <button class="button main" id="save" name="save" type="submit">Сохранить</button>
 								 </div>
 								</form>
 
 								<!--the new forms start here-->
 
-													<form>
+													<form method="post" action="edit-pro.php?sel=<?php echo $sel; ?>#save">
+														<?php include 'checks/directions.php'; ?>
 														<div class="row gtr-uniform">
 															<div class="col-6 col-12-xsmall">
                                 <hr class="major" />
-                                    <h4>Укажите Ваши интересы - 10 направлений</h4>
+                                    <h4>* Укажите направление, в котором хотите развиваться</h4>
 																		<?php
-																		 $sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
-																		 echo "<select name='demo-category' id='demo-category'>";
-																			 echo "<option value=''>- Выберите категорию  -</option>";
-																				 while ($cat = mysqli_fetch_object($sql_cat)) {
-																					 echo "<option value='$cat->name'> $cat->name </option>";
-																				 }
-																		 echo "</select>";
-																		?>
+																			$sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
+																			echo "<select name='category' id='category'
+																			onchange='var a = this.selectedIndex; getSelectedEdit(a);'>";
 
-                                <hr class="major" />
-                                     <h4>Укажите Ваши SMART-цели по каждому из направлений</h4>
+																			//check for matching between cats to keep it filled after the page is reloaded
 
+																			if ($sel != 0) {
+																				$sop = mysqli_fetch_object(mysqli_query($mysql, "SELECT `name` FROM `spheres` WHERE `id` = '$sel'"));
+																				echo "<option value='$sop->name'> $sop->name </option>";
+																			}else {
+																				echo "<option value=''>- Выберите категорию  -</option>";
+																			}
+																			//parsing the rest og them
+																					while ($cat = mysqli_fetch_object($sql_cat)) {
+																						echo "<option value='$cat->name'> $cat->name </option>";
+																					}
+																			echo "</select>";
+																		 ?>
 
-								    <textarea name="demo-message" id="demo-message" placeholder="S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени" rows="6"></textarea>
+														<div class="col-6 col-12-xsmall">
 
+																<hr class="major" />
+																		<h4>* Укажите, насколько для вас сейчас приоритетна, где 5 - слабо приоритетна, и 1 - самая приоритетная </h4>
+																			<select name="priority" id="priority">
+																				<option value="1">1</option>
+																				<option value="2">2</option>
+																				<option value="3">3</option>
+																				<option value="4">4</option>
+																				<option value="5">5</option>
+																			</select>
 
+																		<hr class="major" />
+																		<h4>Вы можете выбрать пондаправление чтобы еще более
+																			сконцентрировать вашу цель</h4>
+																			<!--Take the subcategories from data base-->
+																			<?php
 
+																			echo "<select name='demo-category' id='demo-category'>";
+																				echo "<option value=''>- Выберите подкатегорию  -</option>";
+																					while ($sub_cat = mysqli_fetch_object($sql_sub)) {
+																						echo "<option value='$sub_cat->name'> $sub_cat->name </option>";
+																						$i = $i + 1;
+																				}
+																			echo "</select>";
+																			 ?>
+																		<hr class="major" />
+                                     <h4>* Здесь поставьте SMART-цель по выбранному направлению</h4>
+																		 <p>S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени</p>
+																	    <textarea name="goal" id="goal"
+																			placeholder="S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени" rows="2">
+																				<?php
+																					if (isset($_POST['goal'])) {
+																						echo $goal;
+																					}
+																				 ?>
+																			</textarea>
 
-															</div>
+																		<hr class="major" />
+																	<h5>Добавить еще одно направление. Вы можете поставить цели в 5-ти различных направлениях.</h5>
+																<button class="button main" id="dir" name="save-dir" type="submit" >Сохранить</button>
 														</div>
-														<hr class="major" />
-														<button class="button main" name="save" type="submit">Сохранить</button>
+
+													</div>
+												</div>
 											</form>
 							    	</section>
 						</div>

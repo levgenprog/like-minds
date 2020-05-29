@@ -1,9 +1,21 @@
-
+function getSelected(value) {
+var sel = encodeURIComponent(value);
+ window.location.href = 'search.php?sel=' + sel + '#menu';
+}
+function getSelectedEdit(value) {
+var sel = encodeURIComponent(value);
+ window.location.href = 'edit-pro.php?sel=' + sel + '#save';
+}
+function newDir() {
+	var el = document.querySelector('dir-2');
+	el.style.display = 'block';
+}
 (function($) {
 
 	var	$window = $(window),
 		$head = $('head'),
 		$body = $('body');
+
 
 	// Breakpoints.
 		breakpoints({

@@ -118,7 +118,7 @@ require 'checks/user_inf.php';
 									<div class="col-6 col-12-small">
 										<ul class="actions stacked">
 											<h4>Что-то не так?</h4>
-											<li><a href="edit-pro.php" class="button main" align="left">Редактировать мой профиль</a></li>
+											<li><a href="edit-pro.php?sel=0" class="button main" align="left">Редактировать мой профиль</a></li>
 										</ul>
 									</div>
 
