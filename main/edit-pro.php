@@ -234,7 +234,7 @@ require 'checks/user_inf.php';
 
 																		<hr class="major" />
 																		<h4>Вы можете выбрать пондаправление чтобы еще более
-																			сконцентрировать вашу цель</h4>
+																			сконцентрировать вашу цель. Для этого сначала выберите направление</h4>
 																			<!--Take the subcategories from data base-->
 																			<?php
 
@@ -250,13 +250,7 @@ require 'checks/user_inf.php';
                                      <h4>* Здесь поставьте SMART-цель по выбранному направлению</h4>
 																		 <p>S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени</p>
 																	    <textarea name="goal" id="goal"
-																			placeholder="S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени" rows="2">
-																				<?php
-																					if (isset($_POST['goal'])) {
-																						echo $goal;
-																					}
-																				 ?>
-																			</textarea>
+																			 rows="2"><?php if (isset($_POST['goal'])){ echo $_POST['goal']; }?></textarea>
 
 																		<hr class="major" />
 																	<h5>Добавить еще одно направление. Вы можете поставить цели в 5-ти различных направлениях.</h5>
