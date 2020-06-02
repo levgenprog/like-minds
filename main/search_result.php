@@ -94,23 +94,31 @@ require 'checks/user_inf.php';
 									<?php include '../inc/menu.php'; ?>
 								</section><br><br>
                 <ul class="actions">
-                    <li><a href="search.php" class="button big">Вернуться <strong>в настройки поиска</strong></a></li>
+                    <li><a href="search.php?sel=0" class="button big">Вернуться <strong>в настройки поиска</strong></a></li>
                 </ul>
 											<h2 id="here">Результаты поиска</h2>
 								<section class="alt">
 										<?php
-											if (isset($_POST['search'])) {
+											if (isset($_POST['search']) and isset($_POST['priority'])) {
 												if (isset($_POST['mycity'])) {
-														$result_q = mysqli_query($mysql, "SELECT * FROM `users`
+														$result_city = mysqli_query($mysql, "SELECT * FROM `users`
 														WHERE `country` = '{$current_user['country']}' AND
 														`city` = '{$current_user['city']}' AND
-														`id` <> '{$current_user['id']}'");
+														`id` <> '$myid'");
+														//Find an id of other's priority
+														$result_prior = mysqli_fetch_assoc(mysqli_query($mysql, "SELECT 	pr.id, pr.priority  FROM `priorities` pr
+																																		JOIN  	`spheres` sph on sph.id = pr.sphere_id
+																																		WHERE 	sph.name = '{$_POST['category']}' AND pr.user_id <> '$myid'"));
+														$result_goal = mysqli_fetch_assoc(mysqli_query($mysql, "SELECT * FROM `goal_set` goal
+																																		JOIN  	`spheres` sph on sph.id = goal.sphere_id
+																																		WHERE 	sph.name = '{$_POST['category']}' AND goal.user_id <> '$myid'"));
 												}
+
 												else {
 													echo "It doesn't work";
 												}
 											}
-										while ($result = mysqli_fetch_assoc($result_q)) {
+										while ($result = mysqli_fetch_assoc($result_city)) {
 											?>
 											<div class="result">
 												<solid><b><?php echo $result['user_name'] . ' ' . $result['country'] . ' ' . ' ' . $result['city']; ?></b></solid><br><br>

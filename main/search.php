@@ -2,14 +2,15 @@
 require 'checks/user_inf.php';
 ?>
 <?php
-		if ($_GET['sel']) {
-		$sel = (int) $_GET['sel'];
+if ($_GET['sel']) {
+$sel = (int) $_GET['sel'];
 
-		$sql_sub = mysqli_query($mysql, "SELECT sub.name
-								FROM `subspheres` sub
-								JOIN `spheres` sph on sph.id = sub.sphere_id
-								WHERE `sphere_id` = '$sel'");
-} ?>
+$sql_sub = mysqli_query($mysql, "SELECT sub.name
+            FROM `subspheres` sub
+            JOIN `spheres` sph on sph.id = sub.sphere_id
+            WHERE `sphere_id` = '$sel'");
+}
+ ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
