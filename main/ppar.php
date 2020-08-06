@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -21,67 +21,37 @@
 						<div class="inner">
 
 							<!-- Header -->
-							<?php include "inc/header.php"; ?>
+								<header id="header">
+									<a href="index-1.html" class="logo"><strong>СОЦИАЛЬНАЯ СЕТЬ ДЛЯ НЕТВОРКИНГА</strong> АМБИЦИОЗНЫХ ЛЮДЕЙ</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
 
 							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>В чем важность<br />
-											поиска едино<br />мышленников?</h1>
-										</header>
-                                        <blockquote>"В трудные времена опыт может вас не спасти. Не спасут и трудолюбие и талант. Если вам нужна работа, деньги, хороший совет, помощь или надежда, есть только одно надежное средство – <strong>широкий круг ваших друзей и знакомых."</strong><br /><strong> © Кейт Феррацци, Тал Рэз "Никогда не ешьте в одиночку и другие правила нетворкинга"</strong> </blockquote>
-										<ul class="actions">
-											<li><a href="Личный-Кабинет.html" class="button big">Перейти в <strong>личный кабинет</strong></a></li>
-										</ul>
-                                        <ul class="actions">
-											<li><a href="categ.php" class="button big">Найти <strong>Единомышленников</strong></a></li>
-										</ul>
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
+							
 
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>О нас</h2>
+										<h2>Укажите параметры поиска</h2>
 									</header>
-									<div class="features">
-										<article>
-											<span class="icon solid fa-bullseye"></span>
-											<div class="content">
-												<h3>Нетворкинг для достижения целей</h3>
-												<p>Самым главным приоритетом для нас является максимальная синергия при достижении <strong>общих целей между людьми.</strong></p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-mountain"></span>
-											<div class="content">
-												<h3>Поиск людей по хобби</h3>
-                                                <p>В независимости от того заядлый ли вы путешественник или просто любите на досуге поиграть в шахматы, вы найдете людей которые будут мотивированны достигать <strong>новых вершин вместе с вами!</strong></p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-flag"></span>
-											<div class="content">
-												<h3>Реализация миссии всей жизни</h3>
-												<p>При преодолении ваших задач совместно с другими энтузиастами вы будете приближаться к вашей мечте семимильными шагами</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-hands"></span>
-											<div class="content">
-												<h3>Баланс принимать-отдавать</h3>
-												<p>Вы можете хорошо разбираться в туристическом бизнесе, но при этом у вас нет навыков привлечения клиентов, в то время как другой человек может хорошо разбираться в лидо-генерации, но не иметь представления об индустрии. Наша платформа создана для людей которые хотят совместить свои таланты и таким образом преумножить от них эффект.</p>
-											</div>
-										</article>
-									</div>
+                             <hr class="major" />
+                                    <h4>Опишите вашу цель в данном направлении максимально качественно. <br> Также для этого вам рекомендуеться прочесть  статьи по формированию цели для максимального эффекта. </h4>
+									
+                                    <div class="col-12">
+								    <textarea name="demo-message" id="demo-message" placeholder="Что вы хотите развить?" rows="6"></textarea>
+				             		</div>
 								</section>
-
-							<!-- Section -->
-								<section>
+                            <ul class="actions">
+														<li><a href="#" class="button primary">Поиск</a></li>
+													</ul>
+                            <ul class="actions">
+                              <section>
 									<header class="major">
 										<h2>Наши статьи</h2>
 									</header>
@@ -137,8 +107,14 @@
 									</div>
 								</section>
 
+                             
+                                
+
+													</ul>
+
 						</div>
 					</div>
+                
 
 				<!-- Sidebar -->
 					<div id="sidebar">
@@ -152,7 +128,58 @@
 								</section>
 
 							<!-- Menu -->
-							<?php include "inc/footer.php"; ?>
+								<nav id="menu">
+									<header class="major">
+										<h2>Меню</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Главная страница</a></li>
+										<li><a href="Личный-Кабинет.html">Личный кабинет</a></li>
+										<li><a href="Minded.html">Поиск Единомышленников</a></li>
+                                    </ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Наши статьи</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="SMART.html" class="image"><img src="images/5.jpg" alt="" /></a>
+											<p>Как сформировать SMART-Цель</p>
+										</article>
+										<article>
+											<a href="ЦЗД.html" class="image"><img src="images/6.jpg" alt="" /></a>
+											<p>Система Цели-Задачи-Действия</p>
+										</article>
+										<article>
+											<a href="matrix.html" class="image"><img src="images/88.jpg" alt="" /></a>
+											<p>Матрица Эйзенхауэра</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="SMART.html" class="button">Читать</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Связаться с нами</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">migourgoals@gmail.com</a></li>
+										<li class="icon solid fa-phone">(747) 259 79 62</li>
+										<li class="icon solid fa-home">Almaty<br />
+										</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
+								</footer>
 
 						</div>
 					</div>
