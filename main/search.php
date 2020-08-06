@@ -1,6 +1,16 @@
 <?php
 require 'checks/user_inf.php';
 ?>
+<?php
+if ($_GET['sel']) {
+$sel = (int) $_GET['sel'];
+
+$sql_sub = mysqli_query($mysql, "SELECT sub.name
+            FROM `subspheres` sub
+            JOIN `spheres` sph on sph.id = sub.sphere_id
+            WHERE `sphere_id` = '$sel'");
+}
+ ?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,6 +20,7 @@ require 'checks/user_inf.php';
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -89,39 +100,68 @@ require 'checks/user_inf.php';
 									<header class="main">
 										<h1>Поиск единомышленников</h1>
 									</header>
-                                  <!-- Menu -->
+                <!-- Menu -->
 								<section id="search" class="alt">
-									<nav id="menu">
-									<header class="major">
-										<h2>Меню</h2>
-									</header>
-									<ul>
-										<li><a href="personal.php">Личный кабинет</a></li>
-										<li><a href="../chat/index.php">Мессенджер</a></li>
-										<li><a href="search.php">Поиск Единомышленников</a></li>
-										<li><a href="../auto/exit.php">Выход</a></li>
-                  </ul>
-									</nav>
+									<?php include '../inc/menu.php'; ?>
+
 								</section><br><br>
 											<h2>Поиск единомышленников</h2>
 								<section class="alt">
+									<p>Здесь вы можете указать критерии, по которым вы будете искать ваших единомышленников.<br>
+									Очень рекомендуется выбирать те же категории и приоритеты, которые вы выбрали сами, чтобы собеседник видел, что для вас это также важно.</p>
+
+                  <!--The form begins here-->
+
 									<form method="post" action="search_result.php#here">
 										<div class="col-12">
-														<select name="demo-category" id="demo-category">
-															<option value="">- Выберите категорию  -</option>
-															<option value="1">Образование</option>
-														</select>
+											<!--Take the categories from database-->
+											<h4>* В каком направлении вы хотите найти единомышленника?</h4>
+											<?php
+												$sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
+												echo "<select name='category' id='category'
+												onchange='var a = this.selectedIndex; getSelected(a);'>";
+
+												//check for matching between cats to keep it filled after the page is reloaded
+
+												if ($sel != 0) {
+													$sop = mysqli_fetch_object(mysqli_query($mysql, "SELECT `name` FROM `spheres` WHERE `id` = '$sel'"));
+													echo "<option value='$sop->name'> $sop->name </option>";
+												}else {
+													echo "<option value=''>- Выберите категорию  -</option>";
+												}
+														while ($cat = mysqli_fetch_object($sql_cat)) {
+															echo "<option value='$cat->name'> $cat->name </option>";
+														}
+												echo "</select>";
+											 ?>
 	                        <hr class="minor" />
-															<select name="demo-category" id="demo-category">
-																<option value="">- Выберите подкатегорию  -</option>
-																<option value="1">Менеджмент</option>
-	                              <option value="1">Маркетинг</option>
-	                              <option value="1">Программирование</option>
-															</select>
+
+													<h4>* Насколько приоритетно должно быть это направление для вашего единомышленника?</h4>
+														<select name="priority" id="priority">
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+														</select>
+													<hr class="minor" />
+
+											<!--Take the subcategories from data base-->
+														<h4>Вы можете сконцентрировать поиск, выбрав подкатегорию</h4>
+														<?php
+														echo "<select name='demo-category' id='demo-category'>";
+															echo "<option value=''>- Выберите подкатегорию  -</option>";
+																while ($sub_cat = mysqli_fetch_object($sql_sub)) {
+																	echo "<option value='$sub_cat->name'> $sub_cat->name </option>";
+															}
+														echo "</select>";
+														 ?>
 	                         <hr class="minor" />
-														<input type="text" name="goal" id="goal" placeholder="Цель разговора" /><br>
-														<input type="checkbox" name="mycity" value="yes" checked>
-																<label for="mycity">Искать в моем городе</label> <br><br>
+
+                            <!--search in my city button
+                            <input type="checkbox" name="mycity" value="yes" checked>
+																<label for="mycity"> Искать в моем городе</label> <br><br>-->
+
 														<button class="button main" name="search" type="submit">Поиск</button>
 											</div>
 									</form>
@@ -136,8 +176,9 @@ require 'checks/user_inf.php';
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<!-- Scripts-->
+
+
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>

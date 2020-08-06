@@ -1,15 +1,6 @@
 		<nav id="menu">
 			<!-- Оставить футер в таком же внешнем виде, настроит ссылки и максимальное занимаемое место на экране -->
-									<header class="major">
-										<h2>Меню</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Главная страница</a></li>
-										<li><a href="Личный-Кабинет.html">Личный кабинет</a></li>
-										<li><a href="Minded.html">Поиск Единомышленников</a></li>
-										<li><a href="../chat/chat-index.php">Сообщения</a></li>
-                                    </ul>
-								</nav>
+									<?php include '../inc/menu.php'; ?>
 
 							<!-- Section -->
 								<section>
@@ -52,4 +43,3 @@
 								<footer id="footer">
 									<p class="copyright">&copy; Connection_in_isolation. All rights reserved. </p>
 								</footer>
-

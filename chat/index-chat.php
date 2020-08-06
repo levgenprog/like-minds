@@ -24,11 +24,11 @@ require '../main/checks/user_inf.php';
 				<section>
 					<div class="contetn">
 						<div class="shoutbox">
-							<h1 class="your_messages">Ваши сообщения <img src='./assets/img/refresh.png'/></h1>
+							<h1 class="your_messages">Ваши сообщения <img src='../assets/img/refresh.png'/></h1>
 							<ul class="shoutbox-content"></ul>
 							<div class="shoutbox-form">
 								<h2 class="messages">Написать сообщение<span>×</span></h2>
-								<form action="./publish.php" method="post">
+								<form action="../publish.php" method="post">
 									<input type="text" id="shoutbox-name" value="<?=$current_user['user_name']?>" name="name"/>
 									<textarea id="shoutbox-comment" name="comment"></textarea>
 									<center><input type="submit" class="button" value="Отправить"/></center>
@@ -61,7 +61,7 @@ require '../main/checks/user_inf.php';
 		<script src="../main/assets/js/main.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
-        <script src="./assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 
 	</body>
 	</html>

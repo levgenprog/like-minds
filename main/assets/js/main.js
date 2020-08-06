@@ -1,14 +1,30 @@
-/*
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+//iserting new fields when posting goals
 
+var $add = $('#add');
+$add.on('click', function() {
+  var newDiv = document.createElement('div');
+  newDiv.innerHTML = 'It works!';
+  this.parentNode.insertBefore(newDiv, this);
+});
+
+function getSelected(value) {
+var sel = encodeURIComponent(value);
+ window.location.href = 'search.php?sel=' + sel + '#menu';
+}
+function getSelectedEdit(value) {
+var sel = encodeURIComponent(value);
+ window.location.href = 'edit-pro.php?sel=' + sel + '#save';
+}
+function newDir() {
+	var el = document.querySelector('dir-2');
+	el.style.display = 'block';
+}
 (function($) {
 
 	var	$window = $(window),
 		$head = $('head'),
 		$body = $('body');
+
 
 	// Breakpoints.
 		breakpoints({
@@ -258,5 +274,6 @@
 				});
 
 			});
+
 
 })(jQuery);

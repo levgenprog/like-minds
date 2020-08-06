@@ -61,11 +61,14 @@
 																<div class="col-6 col-12">
 																	<span>Введите ваш e-mail: </span><br>
 																	<input type="text" name="email"  class="form-control" id="email"
-																	value="<?php echo $_POST['email'];?>" placeholder="example@ex.com" />
+																	value="<?php if (isset($_POST['email'])){
+																							echo $_POST['email'];}?>" placeholder="example@ex.com" />
 																	<br>
 																	<span>Введите пароль: </span><br>
 																	<input type="password" name="password" class="form-control" id="password"
-																	 value="<?php echo $_POST['password'];?>"/>
+																	 value="<?php if (isset($_POST['password'])) {
+																							 	echo $_POST['password'];
+																							 	}?>"/>
 																</div>
 															</div><br>
 															<div class="actions stacked">
