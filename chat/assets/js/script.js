@@ -16,21 +16,21 @@ $(function(){
 
     // Load the comments.
     load();
-    
+
     // On form submit, if everything is filled in, publish the shout to the database
-    
+
     var canPostComment = true;
 
     form.submit(function(e){
         e.preventDefault();
 
         if(!canPostComment) return;
-        
+
         var name = nameElement.val().trim();
         var comment = commentElement.val().trim();
 
         if(name.length && comment.length && comment.length < 240) {
-        
+
             publish(name, comment);
 
             // Prevent new shouts from being published
@@ -46,39 +46,39 @@ $(function(){
         }
 
     });
-    
+
     // Toggle the visibility of the form.
-    
+
     shoutboxForm.on('click', 'h2', function(e){
-        
+
         if(form.is(':visible')) {
             formClose();
         }
         else {
             formOpen();
         }
-        
+
     });
-    
+
     // Clicking on the REPLY button writes the name of the person you want to reply to into the textbox.
-    
+
     ul.on('click', '.shoutbox-comment-reply', function(e){
-        
+
         var replyName = $(this).data('name');
-        
+
         formOpen();
         commentElement.val('@'+replyName+' ').focus();
 
     });
-    
+
     // Clicking the refresh button will force the load function
-    
+
     var canReload = true;
 
     refreshButton.click(function(){
 
         if(!canReload) return false;
-        
+
         load();
         canReload = false;
 
@@ -93,7 +93,7 @@ $(function(){
 
 
     function formOpen(){
-        
+
         if(form.is(':visible')) return;
 
         form.slideDown();
@@ -109,9 +109,9 @@ $(function(){
     }
 
     // Store the shout in the database
-    
+
     function publish(name,comment){
-    
+
         $.post('publish.php', {name: name, comment: comment}, function(){
             nameElement.val("");
             commentElement.val("");
@@ -119,17 +119,17 @@ $(function(){
         });
 
     }
-    
+
     // Fetch the latest shouts
-    
+
     function load(){
         $.getJSON('./load.php', function(data) {
             appendComments(data);
         });
     }
-    
+
     // Render an array of shouts as HTML
-    
+
     function appendComments(data) {
 
         ul.empty();

@@ -99,15 +99,19 @@ require 'checks/user_inf.php';
 											<h2 id="here">Результаты поиска</h2>
 								<section class="alt">
 										<?php
-											if (isset($_POST['search']) and isset($_POST['priority'])
-														and isset($_POST['category']) and isset($_POST['mycity'])) {
+											if (isset($_POST['search']) and empty($_POST['category'])){
+														echo '<b><center><font size=4 color=red>Должны быть заполнены как
+														минимум категория и приоритет!</font></center></b>';
+														}
+														elseif (isset($_POST['search'])
+																		and isset($_POST['category'])) {
 												$final_result = mysqli_query($mysql, "SELECT * FROM `users`
-																				WHERE `country` = '{$current_user['country']}' AND
-																				`city` = '{$current_user['city']}'
-																				AND `sphere_1` = '{$_POST['category']}' OR
+																				 WHERE `id` <> '$myid' AND
+																				 `sphere_1` = '{$_POST['category']}' OR
 																				`sphere_2` = '{$_POST['category']}' OR `sphere_3` = '{$_POST['category']}'
 																				AND `priority_1` = '{$_POST['priority']}' OR `priority_2` = '{$_POST['priority']}'
 																				OR `priority_3` = '{$_POST['priority']}'");
+
 
 
 														/*Find an id of other's priority
@@ -125,11 +129,9 @@ require 'checks/user_inf.php';
 																																		JOIN  	`spheres` sph on sph.id = goal.sphere_id
 																																		WHERE 	sph.name = '{$_POST['category']}' AND goal.user_id <> '$myid'"));
 													$arr = array($result_city, $result_prior, $result_goal, );*/
-												}
 
-												else {
-													echo "It doesn't work";
-												}
+
+
 
 										while ($result = mysqli_fetch_assoc($final_result)) {
 											if ($result['sphere_3'] == $_POST['category'] and
@@ -149,6 +151,10 @@ require 'checks/user_inf.php';
 												$user_goal = $result['goal_1'];
 												$user_priority = $result['priority_1'];
 												$user_category = $result['sphere_1'];
+											}else {
+												$user_goal = 'wrong house';
+												$user_priority = 'wrong house';
+												$user_category = 'wrong house';
 											}
 											?>
 											<div class="result">
@@ -166,6 +172,10 @@ require 'checks/user_inf.php';
                         <button type="button" class="button main"> <a href="../chat/index-chat.php">Перейти к диалогу</a> </button>
 											</div><br>
 									<?php
+										}
+										}
+										else {
+											echo "It doesn't work";
 										}
 									 ?>
 									</div>

@@ -1085,10 +1085,10 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-appearance: none;
+  /*-moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
-  appearance: none;
+  appearance: none;*/
   display: block;
   float: left;
   margin-right: -2em;
@@ -1115,7 +1115,7 @@ input[type="radio"] {
       font-variant: normal;
       text-rendering: auto;
       line-height: 1;
-      text-transform: none !important;
+      /*text-transform: none !important;*/
       font-family: 'Font Awesome 5 Free';
       font-weight: 900; }
     input[type="checkbox"] + label:before,
@@ -2277,6 +2277,7 @@ font-weight: 400;
   width: 10%;
   height: 20%;
   border-radius: 50%;
+  display: block;
 }
 .result{
   width: 100%;

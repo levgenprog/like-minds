@@ -61,7 +61,7 @@ require '../main/checks/user_inf.php';
 		<script src="../main/assets/js/main.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
-        <script src="./assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 
 	</body>
 	</html>

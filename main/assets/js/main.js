@@ -1,3 +1,12 @@
+//iserting new fields when posting goals
+
+var $add = $('#add');
+$add.on('click', function() {
+  var newDiv = document.createElement('div');
+  newDiv.innerHTML = 'It works!';
+  this.parentNode.insertBefore(newDiv, this);
+});
+
 function getSelected(value) {
 var sel = encodeURIComponent(value);
  window.location.href = 'search.php?sel=' + sel + '#menu';

@@ -9,7 +9,7 @@ require 'checks/user_inf.php';
 								FROM `subspheres` sub
 								JOIN `spheres` sph on sph.id = sub.sphere_id
 								WHERE `sphere_id` = '$sel'");
-		$i = 0;
+
 }
 ?>
 <!DOCTYPE HTML>
@@ -196,7 +196,7 @@ require 'checks/user_inf.php';
 
 													<form method="post" action="edit-pro.php?sel=<?php echo $sel; ?>#save">
 														<?php include 'checks/directions.php'; ?>
-														<div class="row gtr-uniform">
+														<div class="col-6 col-12-xsmall">
 															<div class="col-6 col-12-xsmall">
                                 <hr class="major" />
                                     <h4>* Укажите направление, в котором хотите развиваться</h4>
@@ -204,9 +204,7 @@ require 'checks/user_inf.php';
 																			$sql_cat = mysqli_query($mysql, "SELECT DISTINCT `name` FROM `spheres` ORDER BY `id`");
 																			echo "<select name='category' id='category'
 																			onchange='var a = this.selectedIndex; getSelectedEdit(a);'>";
-
 																			//check for matching between cats to keep it filled after the page is reloaded
-
 																			if ($sel != 0) {
 																				$sop = mysqli_fetch_object(mysqli_query($mysql, "SELECT `name` FROM `spheres` WHERE `id` = '$sel'"));
 																				echo "<option value='$sop->name'> $sop->name </option>";
@@ -219,9 +217,6 @@ require 'checks/user_inf.php';
 																					}
 																			echo "</select>";
 																		 ?>
-
-														<div class="col-6 col-12-xsmall">
-
 																<hr class="major" />
 																		<h4>* Укажите, насколько для вас сейчас приоритетна, где 5 - слабо приоритетна, и 1 - самая приоритетная </h4>
 																			<select name="priority" id="priority">
@@ -231,18 +226,16 @@ require 'checks/user_inf.php';
 																				<option value="4">4</option>
 																				<option value="5">5</option>
 																			</select>
-
 																		<hr class="major" />
 																		<h4>Вы можете выбрать пондаправление чтобы еще более
 																			сконцентрировать вашу цель. Для этого сначала выберите направление</h4>
 																			<!--Take the subcategories from data base-->
 																			<?php
-
 																			echo "<select name='demo-category' id='demo-category'>";
 																				echo "<option value=''>- Выберите подкатегорию  -</option>";
 																					while ($sub_cat = mysqli_fetch_object($sql_sub)) {
 																						echo "<option value='$sub_cat->name'> $sub_cat->name </option>";
-																						$i = $i + 1;
+
 																				}
 																			echo "</select>";
 																			 ?>
@@ -251,13 +244,12 @@ require 'checks/user_inf.php';
 																		 <p>S-Конкретная, M-Измеримая, A-Достижимая, R-Актуальная, T-Ограниченная по времени</p>
 																	    <textarea name="goal" id="goal"
 																			 rows="2"><?php if (isset($_POST['goal'])){ echo $_POST['goal']; }?></textarea>
-
 																		<hr class="major" />
-																	<h5>Добавить еще одно направление. Вы можете поставить цели в 5-ти различных направлениях.</h5>
-																<button class="button main" id="dir" name="save-dir" type="submit" >Сохранить</button>
-														</div>
-
 													</div>
+													<h5>Добавить еще одно направление. Вы можете поставить цели в 5-ти различных направлениях.</h5>
+
+													<a href="edit-pro.php?sel=0" class="button">Добавить</a>&nbsp;&nbsp;&nbsp; 
+												<button class="button main" id="dir" name="save-dir" type="submit" >Сохранить</button>
 												</div>
 											</form>
 							    	</section>

@@ -109,9 +109,11 @@ $sql_sub = mysqli_query($mysql, "SELECT sub.name
 								<section class="alt">
 									<p>Здесь вы можете указать критерии, по которым вы будете искать ваших единомышленников.<br>
 									Очень рекомендуется выбирать те же категории и приоритеты, которые вы выбрали сами, чтобы собеседник видел, что для вас это также важно.</p>
+
+                  <!--The form begins here-->
+
 									<form method="post" action="search_result.php#here">
 										<div class="col-12">
-
 											<!--Take the categories from database-->
 											<h4>* В каком направлении вы хотите найти единомышленника?</h4>
 											<?php
@@ -156,8 +158,10 @@ $sql_sub = mysqli_query($mysql, "SELECT sub.name
 														 ?>
 	                         <hr class="minor" />
 
-														<input type="checkbox" name="mycity" value="yes" checked>
-																<label for="mycity">Искать в моем городе</label> <br><br>
+                            <!--search in my city button
+                            <input type="checkbox" name="mycity" value="yes" checked>
+																<label for="mycity"> Искать в моем городе</label> <br><br>-->
+
 														<button class="button main" name="search" type="submit">Поиск</button>
 											</div>
 									</form>
@@ -172,9 +176,9 @@ $sql_sub = mysqli_query($mysql, "SELECT sub.name
 
 			</div>
 
-		<!-- Scripts -->
+		<!-- Scripts-->
 
-			<script src="assets/js/jquery.min.js"></script>
+
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
